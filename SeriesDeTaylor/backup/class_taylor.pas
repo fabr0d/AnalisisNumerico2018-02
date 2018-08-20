@@ -11,7 +11,6 @@ type
   TTaylor = class
      x: Real;
      function seno(): Real;
-     function cose(): Real;
      private
 
      public
