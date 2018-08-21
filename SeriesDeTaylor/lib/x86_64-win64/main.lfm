@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 210
-  Height = 521
-  Top = 104
-  Width = 851
+  Left = 621
+  Height = 587
+  Top = 110
+  Width = 740
   Caption = 'Form1'
-  ClientHeight = 0
-  ClientWidth = 0
+  ClientHeight = 587
+  ClientWidth = 740
   LCLVersion = '1.8.4.0'
   object ediX: TEdit
     Left = 232
@@ -21,19 +21,19 @@ object Form1: TForm1
     Width = 80
     TabOrder = 1
   end
-  object btnExecute: TButton
-    Left = 328
+  object btnExecuteSen: TButton
+    Left = 232
     Height = 25
-    Top = 91
+    Top = 120
     Width = 75
-    Caption = 'Execute'
-    OnClick = btnExecuteClick
+    Caption = 'ExecuteSen'
+    OnClick = btnExecuteSenClick
     TabOrder = 2
   end
   object memResult: TMemo
     Left = 232
     Height = 208
-    Top = 120
+    Top = 152
     Width = 349
     TabOrder = 3
   end
@@ -52,5 +52,46 @@ object Form1: TForm1
     Width = 25
     Caption = 'Error'
     ParentColor = False
+  end
+  object btnExecuteCos: TButton
+    Left = 312
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'ExecuteCos'
+    TabOrder = 4
+  end
+  object btnExecuteExp: TButton
+    Left = 392
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'ExecuteExp'
+    OnClick = btnExecuteExpClick
+    TabOrder = 5
+  end
+  object btnExecuteLn: TButton
+    Left = 472
+    Height = 25
+    Top = 120
+    Width = 75
+    Caption = 'ExecuteLn'
+    TabOrder = 6
+  end
+  object btnExecuteArcTan: TButton
+    Left = 552
+    Height = 25
+    Top = 120
+    Width = 88
+    Caption = 'ExecuteArcTan'
+    TabOrder = 7
+  end
+  object btnExecuteArcSen: TButton
+    Left = 640
+    Height = 25
+    Top = 120
+    Width = 88
+    Caption = 'ExecuteArcSen'
+    TabOrder = 8
   end
 end

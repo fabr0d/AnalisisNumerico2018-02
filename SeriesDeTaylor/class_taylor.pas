@@ -12,6 +12,10 @@ type
      x: Real;
      function seno(): Real;
      function cose(): Real;
+     (*function exp(): Real;
+     function ln(): Real;
+     function arctan(): Real;
+     function arcsen(): Real; *)
      private
 
      public
@@ -59,6 +63,22 @@ begin
    repeat
      xnn:= xn;
      Result:= Result + ( Potencia( -1, n )/ factorial( 2*n + 1)) * Potencia( x, 2*n + 1 );
+     xn:= Result;
+     NewError:= abs( xn - xnn );
+     n:= n + 1;
+   until ( ( NewError <= Error ) or ( n > 6 ) );
+
+end;
+function TTaylor.cose(): Real;
+var n: Integer = 0;
+    NewError,
+    xn, xnn: Real;
+begin
+   Result:= 0;
+   xn:= 10000000;
+   repeat
+     xnn:= xn;
+     Result:= Result + ( Potencia( -1, n )/ factorial( 2*n)) * Potencia( x, 2*n );
      xn:= Result;
      NewError:= abs( xn - xnn );
      n:= n + 1;
