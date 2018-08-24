@@ -59,6 +59,7 @@ object Form1: TForm1
     Top = 120
     Width = 75
     Caption = 'ExecuteCos'
+    OnClick = btnExecuteCosClick
     TabOrder = 4
   end
   object btnExecuteExp: TButton
@@ -76,6 +77,7 @@ object Form1: TForm1
     Top = 120
     Width = 75
     Caption = 'ExecuteLn'
+    OnClick = btnExecuteLnClick
     TabOrder = 6
   end
   object btnExecuteArcTan: TButton
@@ -84,6 +86,7 @@ object Form1: TForm1
     Top = 120
     Width = 88
     Caption = 'ExecuteArcTan'
+    OnClick = btnExecuteArcTanClick
     TabOrder = 7
   end
   object btnExecuteArcSen: TButton
@@ -92,6 +95,7 @@ object Form1: TForm1
     Top = 120
     Width = 88
     Caption = 'ExecuteArcSen'
+    OnClick = btnExecuteArcSenClick
     TabOrder = 8
   end
 end

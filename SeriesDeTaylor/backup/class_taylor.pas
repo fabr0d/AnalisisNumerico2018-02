@@ -5,7 +5,7 @@ unit class_taylor;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils,Math;
 
 type
   TTaylor = class
@@ -13,7 +13,7 @@ type
      function seno(): Real;
      function cose(): Real;
      function exp(): Real;
-     function ln(): Real;
+     function ln(): Double;
      function arctan(): Real;
      function arcsen(): Real;
      private
@@ -67,8 +67,8 @@ begin
      NewError:= abs( xn - xnn );
      n:= n + 1;
    until ( ( NewError <= Error ) or ( n > 6 ) );
-
 end;
+
 function TTaylor.cose(): Real;
 var n: Integer = 0;
     NewError,
@@ -83,7 +83,70 @@ begin
      NewError:= abs( xn - xnn );
      n:= n + 1;
    until ( ( NewError <= Error ) or ( n > 6 ) );
+end;
 
+function TTaylor.exp(): Real;
+var n: Integer = 0;
+    NewError,
+    xn, xnn: Real;
+begin
+   Result:= 0;
+   xn:= 10000000;
+   repeat
+     xnn:= xn;
+     Result:= Result + ( Potencia( x, n )/ factorial( n ));
+     xn:= Result;
+     NewError:= abs( xn - xnn );
+     n:= n + 1;
+   until ( ( NewError <= Error ) or ( n > 6 ) );
+end;
+
+function TTaylor.ln(): Double;
+var n: Integer = 0;
+    NewError,
+    xn, xnn: Real;
+begin
+   Result:= 0;
+   xn:= 10000000;
+   repeat
+     xnn:= xn;
+     Result:= Result + (1/2*n+1)*Power(2*n+1,(x-1)/(x+1));
+     xn:= 2*Result;
+     NewError:= abs( xn - xnn );
+     n:= n + 1;
+   until ( ( NewError <= Error ) or ( n > 6 ) );
+end;
+
+function TTaylor.arcsen(): Real;
+var n: Integer = 0;
+    NewError,
+    xn, xnn: Real;
+begin
+   Result:= 0;
+   xn:= 10000000;
+   repeat
+     xnn:= xn;
+     Result:= Result + (factorial(2*n)/Power(4,n)*Power(factorial(n),2)*(2*n+1))*Power(x,2*n+1);
+     xn:= 2*Result;
+     NewError:= abs( xn - xnn );
+     n:= n + 1;
+   until ( ( NewError <= Error ) or ( n > 6 ) );
+end;
+
+function TTaylor.arctan(): Real;
+var n: Integer = 0;
+    NewError,
+    xn, xnn: Real;
+begin
+   Result:= 0;
+   xn:= 10000000;
+   repeat
+     xnn:= xn;
+     Result:= Result + (1/2*n+1)*Power(2*n+1,(x-1)/(x+1));
+     xn:= 2*Result;
+     NewError:= abs( xn - xnn );
+     n:= n + 1;
+   until ( ( NewError <= Error ) or ( n > 6 ) );
 end;
 
 end.
