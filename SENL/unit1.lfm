@@ -1,0 +1,109 @@
+object Form1: TForm1
+  Left = 950
+  Height = 412
+  Top = 157
+  Width = 512
+  Caption = 'Form1'
+  ClientHeight = 412
+  ClientWidth = 512
+  LCLVersion = '1.8.4.0'
+  object Edit1: TEdit
+    Left = 32
+    Height = 23
+    Top = 37
+    Width = 80
+    TabOrder = 0
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 160
+    Height = 23
+    Top = 37
+    Width = 80
+    TabOrder = 1
+    Text = 'Edit2'
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 15
+    Top = 40
+    Width = 9
+    Caption = 'a:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 168
+    Height = 15
+    Top = 8
+    Width = 50
+    Caption = 'Biseccion'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 144
+    Height = 15
+    Top = 40
+    Width = 10
+    Caption = 'b:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 275
+    Height = 15
+    Top = 40
+    Width = 28
+    Caption = 'Error:'
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 312
+    Height = 23
+    Top = 37
+    Width = 80
+    TabOrder = 2
+    Text = 'Edit3'
+  end
+  object StringGrid1: TStringGrid
+    Left = 16
+    Height = 188
+    Top = 96
+    Width = 376
+    AutoFillColumns = True
+    FixedCols = 0
+    TabOrder = 3
+    ColWidths = (
+      74
+      74
+      74
+      74
+      76
+    )
+    Cells = (
+      5
+      0
+      0
+      'n'
+      1
+      0
+      'a'
+      2
+      0
+      'b'
+      3
+      0
+      'xn'
+      4
+      0
+      'error'
+    )
+  end
+  object Button1: TButton
+    Left = 416
+    Height = 25
+    Top = 35
+    Width = 75
+    Caption = 'Ejecutar'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+end

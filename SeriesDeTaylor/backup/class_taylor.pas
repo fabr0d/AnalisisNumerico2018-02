@@ -142,7 +142,7 @@ begin
    xn:= 10000000;
    repeat
      xnn:= xn;
-     Result:= Result + (1/2*n+1)*Power(2*n+1,(x-1)/(x+1));
+     Result:= Result + (Power(-1,n)/(2*n+1))*Power(x,2*n+1);
      xn:= 2*Result;
      NewError:= abs( xn - xnn );
      n:= n + 1;

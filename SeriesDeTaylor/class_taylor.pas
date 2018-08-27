@@ -5,7 +5,7 @@ unit class_taylor;
 interface
 
 uses
-  Classes, SysUtils,Math;
+  Classes, SysUtils, Math;
 
 type
   TTaylor = class
