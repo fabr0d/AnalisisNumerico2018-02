@@ -1,12 +1,13 @@
 object Form1: TForm1
   Left = 534
-  Height = 587
+  Height = 456
   Top = 131
-  Width = 740
+  Width = 767
+  ActiveControl = ediX
   Caption = 'Form1'
-  ClientHeight = 0
-  ClientWidth = 0
-  LCLVersion = '1.8.4.0'
+  ClientHeight = 456
+  ClientWidth = 767
+  Visible = False
   object ediX: TEdit
     Left = 232
     Height = 23

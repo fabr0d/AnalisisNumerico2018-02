@@ -5,54 +5,73 @@ unit classes;
 interface
 
 uses
-  Classes, SysUtils, Math;
+  Classes, SysUtils, math, ParseMath;
 
 type
   TBiseccion = class
-    function general(x:Real): Real;
-    function bolzano(): Real;
-    function xn() :Real;
-    function bisec() :Real;
+      a,
+      b,
+      Error,
+      x: real;
+      fx: string;
+      function Execute: Boolean;
 
     private
-
+      Parse: TParseMath;
+      function f( xx: real): Real;
     public
-      iter: Real;
-      a: Real;
-      b: Real;
-      Error: Real;
-      constructor create();
-      destructor Destroy ; override;
+      xn,
+      en: TStringList;
+      constructor create;
+      destructor Destroy; override;
   end;
 
 implementation
 
-constructor TBiseccion.create();
+function TBiseccion.f( xx: real): Real;
 begin
-  iter:= 0;
+   //Result:= xx*xx - 4;
+   Parse.NewValue( 'x', xx);
+   Result:= Parse.Evaluate();
+end;
+
+function TBiseccion.Execute: Boolean;
+var NewError: Real;
+    xnn: Real;
+begin
+   Parse.Expression:= fx;
+   x:= Infinity;
+   repeat
+     xnn:= x;
+     x:= (a + b) / 2;
+     if f(x) * f(a) < 0 then
+        b:= x
+     else
+        a:=x;
+     NewError:= abs(  x - xnn) ;
+     xn.Add( FloatToStr(x) );
+     en.Add( FloatToStr( NewError ) );
+   until (NewError <= Error );
+   en.Delete( 0 );
+   en.Insert(0, '');
+   Result:= true;
+end;
+
+constructor TBiseccion.create;
+begin
+  xn:= TStringList.Create;
+  en:= TStringList.Create;
+  Parse:= TParseMath.create();
+  Parse.AddVariable( 'x', 0);
+  Parse.Expression:= 'x';
 end;
 
 destructor TBiseccion.Destroy;
 begin
-  //
+  xn.Destroy;
+  en.Destroy;
+  Parse.destroy;
 end;
-
-function TBiseccion.general(x:Real):Real;
-begin
-  Result:=Power(x,2)-sin(x)+8-x;
-end;
-
-function TBiseccion.bolzano():Real;
-begin
-  Result:=general(a)*general(b);
-end;
-
-function TBiseccion.xn():Real;
-begin
-  Result:=(a+b)/2;
-end;
-
-function TBiseccion.
 
 end.
 
