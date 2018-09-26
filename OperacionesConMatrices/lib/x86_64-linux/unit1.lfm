@@ -1,0 +1,261 @@
+object Form1: TForm1
+  Left = 157
+  Height = 487
+  Top = 157
+  Width = 1001
+  Caption = 'Form1'
+  ClientHeight = 487
+  ClientWidth = 1001
+  LCLVersion = '1.6.4.0'
+  object StringGrid1: TStringGrid
+    Left = 48
+    Height = 184
+    Top = 120
+    Width = 208
+    AutoEdit = False
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 0
+    TabOrder = 0
+  end
+  object StringGrid2: TStringGrid
+    Left = 304
+    Height = 184
+    Top = 120
+    Width = 208
+    AutoEdit = False
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 0
+    TabOrder = 1
+  end
+  object StringGrid3: TStringGrid
+    Left = 744
+    Height = 184
+    Top = 88
+    Width = 208
+    AutoEdit = False
+    ColCount = 0
+    FixedCols = 0
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 0
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 560
+    Height = 43
+    Top = 376
+    Width = 102
+    Caption = 'CALCULAR'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 13
+    Height = 20
+    Top = 196
+    Width = 27
+    Caption = 'A = '
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 275
+    Height = 20
+    Top = 197
+    Width = 27
+    Caption = 'B = '
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 680
+    Height = 20
+    Top = 173
+    Width = 59
+    Caption = 'Result = '
+    ParentColor = False
+  end
+  object RadioButton1: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 80
+    Width = 62
+    Caption = 'A + B'
+    Checked = True
+    TabOrder = 4
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 117
+    Width = 58
+    Caption = 'A - B'
+    TabOrder = 5
+  end
+  object RadioButton3: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 154
+    Width = 60
+    Caption = 'A * B'
+    TabOrder = 6
+  end
+  object RadioButton4: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 194
+    Width = 66
+    Caption = 'A^(-1)'
+    TabOrder = 7
+  end
+  object RadioButton5: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 232
+    Width = 66
+    Caption = 'det(A)'
+    TabOrder = 8
+  end
+  object Edit1: TEdit
+    Left = 80
+    Height = 37
+    Top = 312
+    Width = 40
+    TabOrder = 9
+  end
+  object Edit2: TEdit
+    Left = 168
+    Height = 37
+    Top = 312
+    Width = 40
+    TabOrder = 10
+  end
+  object Label4: TLabel
+    Left = 80
+    Height = 20
+    Top = 360
+    Width = 29
+    Caption = 'Filas'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 152
+    Height = 20
+    Top = 360
+    Width = 63
+    Caption = 'Columnas'
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 344
+    Height = 37
+    Top = 312
+    Width = 40
+    TabOrder = 11
+  end
+  object Edit4: TEdit
+    Left = 440
+    Height = 37
+    Top = 312
+    Width = 40
+    TabOrder = 12
+  end
+  object Label6: TLabel
+    Left = 347
+    Height = 20
+    Top = 360
+    Width = 29
+    Caption = 'Filas'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 432
+    Height = 20
+    Top = 360
+    Width = 63
+    Caption = 'Columnas'
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 88
+    Height = 33
+    Top = 392
+    Width = 112
+    Caption = 'CREAR MATRIZ'
+    OnClick = Button2Click
+    TabOrder = 13
+  end
+  object Button3: TButton
+    Left = 360
+    Height = 33
+    Top = 392
+    Width = 112
+    Caption = 'CREAR MATRIZ'
+    OnClick = Button3Click
+    TabOrder = 14
+  end
+  object Label8: TLabel
+    Left = 384
+    Height = 42
+    Top = 32
+    Width = 153
+    Caption = 'MATRICES'
+    Font.Height = -33
+    ParentColor = False
+    ParentFont = False
+  end
+  object RadioButton6: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 264
+    Width = 60
+    Caption = 'A^(T)'
+    TabOrder = 15
+  end
+  object Memo1: TMemo
+    Left = 712
+    Height = 112
+    Top = 312
+    Width = 226
+    Lines.Strings = (
+      'Memo1'
+    )
+    TabOrder = 16
+  end
+  object RadioButton7: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 292
+    Width = 59
+    Caption = 'n * A'
+    TabOrder = 17
+  end
+  object RadioButton8: TRadioButton
+    Left = 560
+    Height = 24
+    Top = 325
+    Width = 68
+    Caption = 'A ^ (n)'
+    TabOrder = 18
+  end
+  object Edit5: TEdit
+    Left = 252
+    Height = 37
+    Top = 424
+    Width = 80
+    TabOrder = 19
+  end
+  object Label9: TLabel
+    Left = 224
+    Height = 20
+    Top = 434
+    Width = 22
+    Caption = 'n ='
+    ParentColor = False
+  end
+end

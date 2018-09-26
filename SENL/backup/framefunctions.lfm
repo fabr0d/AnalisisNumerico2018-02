@@ -1,0 +1,59 @@
+object GraphicsFrameTemplate: TGraphicsFrameTemplate
+  Left = 0
+  Height = 454
+  Top = 0
+  Width = 791
+  ClientHeight = 454
+  ClientWidth = 791
+  OnClick = FrameClick
+  TabOrder = 0
+  object Panel1: TPanel
+    Left = 1
+    Height = 452
+    Top = 1
+    Width = 789
+    Align = alClient
+    BorderSpacing.Around = 1
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ClientHeight = 452
+    ClientWidth = 789
+    TabOrder = 0
+    OnClick = FrameClick
+    object ediF: TEdit
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = cbtnFunSeriesColor
+      Left = 4
+      Height = 23
+      Top = 215
+      Width = 752
+      Anchors = [akTop, akLeft, akRight]
+      BorderSpacing.Left = 2
+      BorderSpacing.Right = 2
+      OnClick = FrameClick
+      OnKeyUp = ediFKeyUp
+      TabOrder = 0
+    end
+    object cbtnFunSeriesColor: TColorButton
+      AnchorSideLeft.Control = ediF
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = ediF
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      Left = 758
+      Height = 25
+      Top = 214
+      Width = 27
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 2
+      BorderWidth = 2
+      ButtonColorSize = 16
+      ButtonColor = clBlue
+      OnClick = FrameClick
+      OnColorChanged = cbtnFunSeriesColorColorChanged
+    end
+  end
+end

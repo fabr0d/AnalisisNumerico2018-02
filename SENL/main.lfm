@@ -1,69 +1,209 @@
 object Form1: TForm1
-  Left = 604
-  Height = 412
-  Top = 164
-  Width = 747
+  Left = 0
+  Height = 494
+  Top = 0
+  Width = 784
+  ActiveControl = EdtFuncion1
   Caption = 'Form1'
-  ClientHeight = 412
-  ClientWidth = 747
-  LCLVersion = '1.8.4.0'
-  object Edit1: TEdit
-    Left = 32
-    Height = 23
-    Top = 37
-    Width = 80
-    TabOrder = 0
-    Text = 'Edit1'
-  end
-  object Edit2: TEdit
-    Left = 160
-    Height = 23
-    Top = 37
-    Width = 80
-    TabOrder = 1
-    Text = 'Edit2'
-  end
-  object Label1: TLabel
-    Left = 16
-    Height = 15
-    Top = 40
-    Width = 9
-    Caption = 'a:'
-    ParentColor = False
-    OnClick = Label1Click
-  end
-  object Label2: TLabel
-    Left = 168
+  ClientHeight = 494
+  ClientWidth = 784
+  OnCreate = FormCreate
+  Visible = False
+  object Funcion1: TLabel
+    Left = 8
     Height = 15
     Top = 8
-    Width = 50
-    Caption = 'Biseccion'
+    Width = 57
+    Caption = 'Func1(red)'
     ParentColor = False
   end
-  object Label3: TLabel
-    Left = 144
+  object Funcion2: TLabel
+    Left = 5
     Height = 15
-    Top = 40
-    Width = 10
-    Caption = 'b:'
-    ParentColor = False
-    OnClick = Label3Click
-  end
-  object Label4: TLabel
-    Left = 275
-    Height = 15
-    Top = 40
-    Width = 28
-    Caption = 'Error:'
+    Top = 44
+    Width = 63
+    Caption = 'Func2(blue)'
     ParentColor = False
   end
-  object Edit3: TEdit
-    Left = 312
+  object EdtFuncion1: TEdit
+    Left = 71
     Height = 23
-    Top = 37
+    Top = 8
     Width = 80
-    OnChange = Edit3Change
+    TabOrder = 0
+    Text = 'sin(x)'
+  end
+  object EdtFuncion2: TEdit
+    Left = 71
+    Height = 23
+    Top = 44
+    Width = 80
+    TabOrder = 1
+    Text = '(x^2)/88'
+  end
+  object a: TLabel
+    Left = 160
+    Height = 15
+    Top = 8
+    Width = 25
+    Caption = 'a (xi)'
+    ParentColor = False
+  end
+  object b: TLabel
+    Left = 160
+    Height = 15
+    Top = 44
+    Width = 7
+    Caption = 'b'
+    ParentColor = False
+  end
+  object EdtA: TEdit
+    Left = 208
+    Height = 23
+    Top = 8
+    Width = 80
     TabOrder = 2
-    Text = 'Edit3'
+    Text = '2'
+  end
+  object EdtB: TEdit
+    Left = 176
+    Height = 23
+    Top = 44
+    Width = 80
+    TabOrder = 3
+    Text = '7'
+  end
+  object Error: TLabel
+    Left = 308
+    Height = 15
+    Top = 8
+    Width = 25
+    Caption = 'Error'
+    ParentColor = False
+  end
+  object EdtError: TEdit
+    Left = 340
+    Height = 23
+    Top = 8
+    Width = 80
+    TabOrder = 4
+    Text = '0.00001'
+  end
+  object Metodo: TLabel
+    Left = 272
+    Height = 15
+    Top = 44
+    Width = 42
+    Caption = 'Metodo'
+    ParentColor = False
+  end
+  object CBsenl: TComboBox
+    Left = 320
+    Height = 23
+    Top = 44
+    Width = 100
+    ItemHeight = 15
+    TabOrder = 5
+    Text = 'SeleccioneMetodo'
+  end
+  object BtnEjecutar: TButton
+    Left = 0
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'BtnEjecutar'
+    OnClick = BtnEjecutarClick
+    TabOrder = 6
+  end
+  object StringGrid1: TStringGrid
+    Left = 432
+    Height = 472
+    Top = 0
+    Width = 336
+    AutoFillColumns = True
+    Columns = <    
+      item
+        Title.Caption = 'n'
+        Width = 66
+      end    
+      item
+        Title.Caption = 'a'
+        Width = 66
+      end    
+      item
+        Title.Caption = 'b'
+        Width = 66
+      end    
+      item
+        Title.Caption = 'x'
+        Width = 66
+      end    
+      item
+        Title.Caption = 'Error'
+        Width = 68
+      end>
+    FixedCols = 0
+    TabOrder = 7
+    ColWidths = (
+      66
+      66
+      66
+      66
+      68
+    )
+  end
+  object Chart1: TChart
+    Left = 5
+    Height = 368
+    Top = 104
+    Width = 420
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Extent.UseXMax = True
+    Extent.UseXMin = True
+    Extent.UseYMax = True
+    Extent.UseYMin = True
+    Extent.XMax = 5
+    Extent.XMin = -5
+    Extent.YMax = 5
+    Extent.YMin = -5
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1LineSeries1: TLineSeries
+      LinePen.Color = clRed
+    end
+    object Chart1FuncSeries1: TFuncSeries
+      Active = False
+      OnCalculate = Chart1FuncSeries1Calculate
+      Pen.Color = clRed
+    end
+    object Chart1ConstantLine1: TConstantLine
+      Position = 0
+    end
+    object Chart1ConstantLine2: TConstantLine
+      LineStyle = lsVertical
+      Position = 0
+    end
+    object Chart1FuncSeries2: TFuncSeries
+      Active = False
+      OnCalculate = Chart1FuncSeries2Calculate
+      Pen.Color = clBlue
+    end
   end
 end
