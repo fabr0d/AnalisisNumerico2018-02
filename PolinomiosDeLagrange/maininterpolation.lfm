@@ -1,0 +1,144 @@
+object Lagrangefrm: TLagrangefrm
+  Left = 364
+  Height = 311
+  Top = 311
+  Width = 557
+  ActiveControl = ediTotalPoints
+  Caption = 'Lagrangefrm'
+  ClientHeight = 311
+  ClientWidth = 557
+  OnCreate = FormCreate
+  Visible = False
+  object ediTotalPoints: TEdit
+    Left = 248
+    Height = 23
+    Top = 72
+    Width = 64
+    Alignment = taRightJustify
+    TabOrder = 0
+    Text = '4'
+  end
+  object Label1: TLabel
+    Left = 248
+    Height = 15
+    Top = 32
+    Width = 95
+    Caption = 'NumeroDePuntos'
+    ParentColor = False
+  end
+  object btnSetTotalPoints: TButton
+    Left = 341
+    Height = 24
+    Top = 72
+    Width = 48
+    Caption = 'Crear'
+    OnClick = btnSetTotalPointsClick
+    TabOrder = 1
+  end
+  object stgPoints: TStringGrid
+    Left = 16
+    Height = 224
+    Top = 16
+    Width = 184
+    ColCount = 3
+    DefaultColWidth = 60
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 2
+    Cells = (
+      3
+      0
+      0
+      '      n'
+      1
+      0
+      '      x'
+      2
+      0
+      '      y'
+    )
+  end
+  object btnCalculate: TButton
+    Left = 304
+    Height = 23
+    Top = 200
+    Width = 72
+    Caption = 'Calculate'
+    OnClick = btnCalculateClick
+    TabOrder = 3
+  end
+  object edix: TEdit
+    Left = 272
+    Height = 23
+    Top = 144
+    Width = 64
+    Alignment = taRightJustify
+    Enabled = False
+    TabOrder = 4
+  end
+  object Label2: TLabel
+    Left = 216
+    Height = 15
+    Top = 152
+    Width = 32
+    Caption = 'Punto'
+    ParentColor = False
+  end
+  object ediy: TEdit
+    Left = 352
+    Height = 23
+    Top = 144
+    Width = 64
+    Alignment = taRightJustify
+    Enabled = False
+    TabOrder = 5
+  end
+  object btnAddPoint: TButton
+    Left = 432
+    Height = 23
+    Top = 144
+    Width = 48
+    Caption = 'Anadir'
+    OnClick = btnAddPointClick
+    TabOrder = 6
+  end
+  object ediPolinomy1: TEdit
+    Left = 80
+    Height = 23
+    Top = 248
+    Width = 423
+    TabOrder = 7
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 15
+    Top = 256
+    Width = 31
+    Caption = 'Pol1='
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 304
+    Height = 15
+    Top = 128
+    Width = 7
+    Caption = 'X'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 382
+    Height = 15
+    Top = 128
+    Width = 7
+    Caption = 'Y'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 408
+    Height = 15
+    Top = 72
+    Width = 92
+    Caption = 'Maximo 6 Puntos'
+    ParentColor = False
+  end
+end

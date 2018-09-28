@@ -1,0 +1,100 @@
+object frmGraphics: TfrmGraphics
+  Left = 248
+  Height = 624
+  Top = 28
+  Width = 892
+  Caption = 'frmGraphics'
+  ClientHeight = 624
+  ClientWidth = 892
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '1.8.2.0'
+  object charFunction: TChart
+    Left = 264
+    Height = 624
+    Top = 0
+    Width = 628
+    AxisList = <    
+      item
+        Grid.Color = clSilver
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Color = clSilver
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    BackColor = clWhite
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Proportional = True
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Toolset = ChartToolset1
+    Align = alRight
+    Color = clWhite
+    object charFunctionFuncSeries1: TFuncSeries
+      Active = False
+      OnCalculate = charFunctionFuncSeries1Calculate
+    end
+    object charFunctionConstantLine1: TConstantLine
+      LineStyle = lsVertical
+      Position = 0
+    end
+    object charFunctionConstantLine2: TConstantLine
+      Position = 0
+    end
+  end
+  object GraphicScroll: TPanel
+    Left = 0
+    Height = 624
+    Top = 0
+    Width = 264
+    Align = alLeft
+    ClientHeight = 624
+    ClientWidth = 264
+    ParentColor = False
+    TabOrder = 1
+    object Edit1: TEdit
+      Left = 136
+      Height = 23
+      Top = 584
+      Width = 80
+      TabOrder = 0
+      Text = 'Edit1'
+    end
+    object Label1: TLabel
+      Left = 112
+      Height = 15
+      Top = 591
+      Width = 21
+      Caption = 'Res:'
+      ParentColor = False
+    end
+    object Button1: TButton
+      Left = 16
+      Height = 25
+      Top = 581
+      Width = 75
+      Caption = 'Calculate'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+  end
+  object ChartToolset1: TChartToolset
+    left = 666
+    top = 225
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssLeft]
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
+    end
+  end
+end
