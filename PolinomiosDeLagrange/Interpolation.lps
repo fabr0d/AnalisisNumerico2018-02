@@ -19,6 +19,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="mainInterpolation"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="69" Y="9"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>
@@ -28,7 +29,6 @@
         <Filename Value="logicinterpolation.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="LogicInterpolation"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="30" Y="9"/>
         <UsageCount Value="37"/>
