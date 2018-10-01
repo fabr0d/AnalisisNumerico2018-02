@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, TAGraph, TAFuncSeries, TASeries, TATools, Forms,
-  Controls, Graphics, Dialogs, StdCtrls, Grids, LogicInterpolation, ParseMath;
+  Controls, Graphics, Dialogs, StdCtrls, Grids, LogicInterpolation;
 
 type
 
