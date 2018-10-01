@@ -89,7 +89,25 @@ begin
    else
      Result.resFloat := NaN;
 end;
+{
+Procedure ExprNewton( var Result: TFPExpressionResult; Const Args: TExprParameterArray);
+var
+  x: Double;
+  f: string;
+  TheNewton: TNewton;
+begin
+   f:= Args[ 0 ].ResString;
+   x:= ArgToFloat( Args[ 1 ] );
 
+   TheNewton:= TNewton.Create;
+   TheNewton.InitialPoint:= x;
+   TheNewton.Expression:= f;
+   Result.ResFloat := TheNewton.Execute;
+
+   TheNewton.Destroy;
+
+end;
+}
 Procedure ExprSin( var Result: TFPExpressionResult; Const Args: TExprParameterArray);
 var
   x: Double;

@@ -29,7 +29,6 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label9: TLabel;
-    Memo1: TMemo;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
@@ -72,15 +71,7 @@ var
   expo: Integer;
 begin
   StringGrid3.Clear;
-  //StringGrid1.RowCount:=StrToInt(Edit1.Text);
-  //StringGrid1.ColCount:=StrToInt(Edit2.Text);
-  //StringGrid2.RowCount:=StrToInt(Edit3.Text);
-  //StringGrid2.ColCount:=StrToInt(Edit4.Text);
-
   m1 := readMatrix(StringGrid1);
-
-  //For matrix operations we only need rows of StringGrid1
-  //                               and cols of StringGrid2
   rows1 := StringGrid1.RowCount;
   cols1 := StringGrid1.ColCount;
   cols2 := StringGrid2.ColCount;
@@ -159,17 +150,14 @@ begin
     StringGrid3.ColCount:= rows1;
     StringGrid3.RowCount:= cols1;
     res := calculator.transposed(m1);
-    //Memo1.Lines.add('finished transpose');
   end;
 
   if RadioButton7.Checked then
   begin
-    //Memo1.Lines.add('init 7');
     StringGrid3.ColCount:= cols1;
     StringGrid3.RowCount:= rows1;
     escalar:= StrToFloat( Edit5.Text );
     res := calculator.multiplyByNumber(m1,escalar);
-    //Memo1.Lines.add('finish 7');
   end;
   if RadioButton8.Checked then
   begin
@@ -187,10 +175,6 @@ begin
 
   if (not RadioButton5.Checked ) then
   begin
-     //Memo1.Lines.add('init filling matrix result');
-     // Fill StringGrid3 with matrix res
-     //Memo1.Lines.add('filling grid result ['+ IntToStr(Length(res))+' , '+ IntToStr(Length(res[0])));
-     //Memo1.Lines.add('filling grid result ['+ IntToStr(StringGrid3.RowCount)+' , '+ IntToStr(StringGrid3.ColCount));
      for i:= 0 to Length(res)-1 do
          for j:=0 to Length(res[0])-1 do
              StringGrid3.Cells[j,i] := FloatToStr(res[i,j]);
@@ -218,7 +202,6 @@ var
 begin
   cols := Grid.ColCount;
   rows := Grid.RowCount;
-  //SetLength(Result,cols, rows);
   SetLength(Result,rows, cols);
 
   for i:=0 to rows-1 do

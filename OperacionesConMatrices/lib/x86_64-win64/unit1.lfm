@@ -1,12 +1,12 @@
 object Form1: TForm1
   Left = 157
-  Height = 371
+  Height = 274
   Top = 157
-  Width = 788
+  Width = 791
   ActiveControl = StringGrid1
   Caption = 'Form1'
-  ClientHeight = 371
-  ClientWidth = 788
+  ClientHeight = 274
+  ClientWidth = 791
   Visible = False
   object StringGrid1: TStringGrid
     Left = 19
@@ -14,6 +14,7 @@ object Form1: TForm1
     Top = 8
     Width = 208
     AutoEdit = False
+    AutoFillColumns = True
     ColCount = 0
     FixedCols = 0
     FixedRows = 0
@@ -48,11 +49,11 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Button1: TButton
-    Left = 480
+    Left = 648
     Height = 24
-    Top = 152
+    Top = 233
     Width = 73
-    Caption = 'CALCULAR'
+    Caption = 'Run'
     OnClick = Button1Click
     TabOrder = 3
   end
@@ -206,43 +207,33 @@ object Form1: TForm1
     Caption = 'A^(T)'
     TabOrder = 15
   end
-  object Memo1: TMemo
-    Left = 560
-    Height = 148
-    Top = 212
-    Width = 208
-    Lines.Strings = (
-      'Memo1'
-    )
-    TabOrder = 16
-  end
   object RadioButton7: TRadioButton
-    Left = 440
+    Left = 552
     Height = 19
-    Top = 272
+    Top = 224
     Width = 46
     Caption = 'n * A'
-    TabOrder = 17
+    TabOrder = 16
   end
   object RadioButton8: TRadioButton
-    Left = 440
+    Left = 552
     Height = 19
-    Top = 293
+    Top = 245
     Width = 57
     Caption = 'A ^ (n)'
-    TabOrder = 18
+    TabOrder = 17
   end
   object Edit5: TEdit
-    Left = 349
+    Left = 461
     Height = 23
-    Top = 280
+    Top = 232
     Width = 80
-    TabOrder = 19
+    TabOrder = 18
   end
   object Label9: TLabel
-    Left = 328
+    Left = 440
     Height = 15
-    Top = 280
+    Top = 232
     Width = 18
     Caption = 'n ='
     ParentColor = False
