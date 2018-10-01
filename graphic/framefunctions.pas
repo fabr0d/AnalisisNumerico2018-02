@@ -17,7 +17,6 @@ type
     ediF: TEdit;
     Panel1: TPanel;
 
-    procedure cbtnFunSeriesColorClick(Sender: TObject);
     procedure cbtnFunSeriesColorColorChanged(Sender: TObject);
     procedure ediFKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FrameClick(Sender: TObject);
@@ -87,11 +86,6 @@ procedure TGraphicsFrameTemplate.FrameClick(Sender: TObject);
 begin
   frmGraphics.GFActualPosition:= Self.Tag;
   Panel1.Color:= clGray;
-end;
-
-procedure TGraphicsFrameTemplate.cbtnFunSeriesColorClick(Sender: TObject);
-begin
-
 end;
 
 procedure TGraphicsFrameTemplate.cbtnFunSeriesColorColorChanged(Sender: TObject

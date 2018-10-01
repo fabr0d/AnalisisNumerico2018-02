@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="3"/>
         <CursorPos X="39" Y="17"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,9 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="40"/>
+        <TopLine Value="46"/>
         <CursorPos X="17" Y="53"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -31,8 +31,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="NewtonGenMethod"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="28" Y="8"/>
-        <UsageCount Value="58"/>
+        <TopLine Value="28"/>
+        <CursorPos X="34" Y="37"/>
+        <UsageCount Value="59"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -58,7 +59,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="4"/>
         <CursorPos Y="92"/>
-        <UsageCount Value="26"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -90,7 +91,7 @@
         <UsageCount Value="10"/>
       </Unit9>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="221" TopLine="190"/>
@@ -195,6 +196,14 @@
         <Filename Value="main.pas"/>
         <Caret Line="179" Column="17" TopLine="176"/>
       </Position26>
+      <Position27>
+        <Filename Value="main.pas"/>
+        <Caret Line="53" Column="17" TopLine="40"/>
+      </Position27>
+      <Position28>
+        <Filename Value="newtongenmethod.pas"/>
+        <Caret Line="42" Column="10"/>
+      </Position28>
     </JumpHistory>
   </ProjectSession>
   <Debugging>

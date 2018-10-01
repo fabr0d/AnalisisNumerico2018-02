@@ -17,11 +17,8 @@ type
     charFunctionConstantLine1: TConstantLine;
     charFunctionConstantLine2: TConstantLine;
     charFunctionFuncSeries1: TFuncSeries;
-    ChartToolset1: TChartToolset;
-    ChartToolset1DataPointClickTool1: TDataPointClickTool;
     GraphicScroll: TPanel;
     StatusBar1: TStatusBar;
-    procedure charFunctionFuncSeries1Calculate(const AX: Double; out AY: Double);
     procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
       APoint: TPoint);
     procedure FormCreate(Sender: TObject);
@@ -62,12 +59,6 @@ begin
    end;
 
    *)
-end;
-
-procedure TfrmGraphics.charFunctionFuncSeries1Calculate(const AX: Double; out
-  AY: Double);
-begin
-
 end;
 
 procedure TfrmGraphics.ChartToolset1DataPointClickTool1PointClick(

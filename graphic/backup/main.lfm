@@ -50,7 +50,6 @@ object frmGraphics: TfrmGraphics
     Color = clWhite
     object charFunctionFuncSeries1: TFuncSeries
       Active = False
-      OnCalculate = charFunctionFuncSeries1Calculate
     end
     object charFunctionConstantLine1: TConstantLine
       LineStyle = lsVertical
@@ -78,10 +77,9 @@ object frmGraphics: TfrmGraphics
     SimpleText = 'XD'
   end
   object ChartToolset1: TChartToolset
-    left = 666
-    top = 225
-    object ChartToolset1DataPointClickTool1: TDataPointClickTool
-      OnPointClick = ChartToolset1DataPointClickTool1PointClick
+    left = 624
+    top = 272
+    object ChartToolset1PanDragTool1: TPanDragTool
     end
   end
 end

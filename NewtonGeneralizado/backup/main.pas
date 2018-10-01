@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, newtongenmethod, ParseMath, matrix;
+  Grids, newtongenmethod, ParseMath, Matrix;
 
 type
 
