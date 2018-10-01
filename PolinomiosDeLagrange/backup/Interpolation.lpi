@@ -30,7 +30,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="3">
       <Unit0>
         <Filename Value="Interpolation.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -48,14 +48,6 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="LogicInterpolation"/>
       </Unit2>
-      <Unit3>
-        <Filename Value="graphic.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form2"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Graphic"/>
-      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

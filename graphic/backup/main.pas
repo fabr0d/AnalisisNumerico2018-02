@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, TAGraph, TATools, TAFuncSeries, TASeries, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, framefunctions, Types;
+  Controls, Graphics, Dialogs, ExtCtrls, ComCtrls, framefunctions, Types;
 
 type
 
@@ -19,9 +19,11 @@ type
     charFunctionFuncSeries1: TFuncSeries;
     ChartToolset1: TChartToolset;
     ChartToolset1DataPointClickTool1: TDataPointClickTool;
-    ChartToolset1ZoomMouseWheelTool1: TZoomMouseWheelTool;
     GraphicScroll: TPanel;
-      ATool: TChartTool; APoint: TPoint);
+    StatusBar1: TStatusBar;
+    procedure charFunctionFuncSeries1Calculate(const AX: Double; out AY: Double);
+    procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
+      APoint: TPoint);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -62,13 +64,34 @@ begin
    *)
 end;
 
+procedure TfrmGraphics.charFunctionFuncSeries1Calculate(const AX: Double; out
+  AY: Double);
+begin
+
+end;
+
+procedure TfrmGraphics.ChartToolset1DataPointClickTool1PointClick(
+  ATool: TChartTool; APoint: TPoint);
+var
+  x, y: Double;
+begin
+  with ATool as TDatapointClickTool do
+    if (Series is TLineSeries) then
+      with TLineSeries(Series) do begin
+        x := GetXValue(PointIndex);
+        y := GetYValue(PointIndex);
+        Statusbar1.SimpleText := Format('%s: x = %f, y = %f', [Title, x, y]);
+      end
+    else
+      Statusbar1.SimpleText := '';
+end;
+
 procedure TfrmGraphics.FormCreate(Sender: TObject);
 begin
   GFMaxPosition:= -1;
   AddGraphics;
 
 end;
-
 
 procedure TfrmGraphics.FormDestroy(Sender: TObject);
 var i: Integer;

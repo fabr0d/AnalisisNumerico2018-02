@@ -11,10 +11,9 @@ object frmGraphics: TfrmGraphics
   Visible = False
   object charFunction: TChart
     Left = 256
-    Height = 408
+    Height = 385
     Top = 0
     Width = 531
-    AutoFocus = True
     AxisList = <    
       item
         Grid.Color = clSilver
@@ -31,6 +30,14 @@ object frmGraphics: TfrmGraphics
         Title.LabelBrush.Style = bsClear
       end>
     BackColor = clWhite
+    Extent.UseXMax = True
+    Extent.UseXMin = True
+    Extent.UseYMax = True
+    Extent.UseYMin = True
+    Extent.XMax = 10
+    Extent.XMin = -10
+    Extent.YMax = 10
+    Extent.YMin = -10
     Foot.Brush.Color = clBtnFace
     Foot.Font.Color = clBlue
     Title.Brush.Color = clBtnFace
@@ -43,6 +50,7 @@ object frmGraphics: TfrmGraphics
     Color = clWhite
     object charFunctionFuncSeries1: TFuncSeries
       Active = False
+      OnCalculate = charFunctionFuncSeries1Calculate
     end
     object charFunctionConstantLine1: TConstantLine
       LineStyle = lsVertical
@@ -54,20 +62,26 @@ object frmGraphics: TfrmGraphics
   end
   object GraphicScroll: TPanel
     Left = 0
-    Height = 408
+    Height = 385
     Top = 0
     Width = 256
     Align = alLeft
     ParentColor = False
     TabOrder = 1
   end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 385
+    Width = 787
+    Panels = <>
+    SimpleText = 'XD'
+  end
   object ChartToolset1: TChartToolset
     left = 666
     top = 225
     object ChartToolset1DataPointClickTool1: TDataPointClickTool
-    end
-    object ChartToolset1ZoomMouseWheelTool1: TZoomMouseWheelTool
-      OnAfterMouseWheelDown = ChartToolset1ZoomMouseWheelTool1AfterMouseWheelDown
+      OnPointClick = ChartToolset1DataPointClickTool1PointClick
     end
   end
 end

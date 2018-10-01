@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 0
+  Height = 386
+  Top = 0
+  Width = 659
+  Caption = 'Form1'
+  ClientHeight = 386
+  ClientWidth = 659
+  OnCreate = FormCreate
+  Visible = False
+  object StringRoots: TStringGrid
+    Left = 24
+    Height = 264
+    Top = 24
+    Width = 240
+    AutoFillColumns = True
+    ColCount = 2
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 2
+    ColWidths = (
+      118
+      118
+    )
+    Cells = (
+      2
+      0
+      0
+      'n'
+      1
+      0
+      'x'
+    )
+  end
+  object Label1: TLabel
+    Left = 336
+    Height = 15
+    Top = 56
+    Width = 96
+    Caption = 'Numero de Raices'
+    ParentColor = False
+  end
+  object EditNumRaices: TEdit
+    Left = 336
+    Height = 23
+    Top = 90
+    Width = 80
+    TabOrder = 0
+  end
+  object EditPolFinal: TEdit
+    Left = 24
+    Height = 23
+    Top = 328
+    Width = 600
+    TabOrder = 1
+    Text = 'EditPolFinal'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 304
+    Width = 55
+    Caption = 'Polinomio'
+    ParentColor = False
+  end
+  object ButtonCalcularPol: TButton
+    Left = 432
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'Run'
+    OnClick = ButtonCalcularPolClick
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 288
+    Height = 15
+    Top = 160
+    Width = 21
+    Caption = 'Raiz'
+    ParentColor = False
+  end
+  object EditRaiz: TEdit
+    Left = 336
+    Height = 23
+    Top = 160
+    Width = 80
+    Enabled = False
+    TabOrder = 4
+    Text = '2'
+  end
+  object ButtonEstablecerRaices: TButton
+    Left = 432
+    Height = 25
+    Top = 88
+    Width = 75
+    Caption = 'Crear'
+    OnClick = ButtonEstablecerRaicesClick
+    TabOrder = 5
+  end
+  object ButtonAnadirRaiz: TButton
+    Left = 432
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'Añadir'
+    OnClick = ButtonAnadirRaizClick
+    TabOrder = 6
+  end
+end

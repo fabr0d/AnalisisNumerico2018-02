@@ -6,7 +6,7 @@ interface
 uses
   Classes, SysUtils;
 type
-    TPoint = class x,y: Real; end;
+    TPoint = class x,y: Real;end;
 
     TInterpolation = class
       arrPoints : array of TPoint;
@@ -14,8 +14,6 @@ type
     public
       constructor create(n: Integer);
       function getPolinomy(): String;
-      function limInferior(): Double;
-      function limSuperior(): Double;
     end;
 
 implementation
@@ -50,7 +48,7 @@ begin
       else if num = 0 then
         p := '(x)'
       else
-        p := '(x+'+abs(FloatToStr(num))+')'; //((i = tp-1) and (j <>tp-2))
+        p := '(x+'+FloatToStr(abs(num))+')'; //((i = tp-1) and (j <>tp-2))
       if (j <> tp-1) then
         if not ((i = tp-1) and (j  = tp-2)) then
            p := p + '*';
@@ -61,32 +59,6 @@ begin
     if i <> tp-1 then
       Result := Result + ' + ';
   end;
-end;
-
-function TInterpolation.limInferior(): Double;
-var
-  i: Integer;
-  min: Double;
-begin
-  min := arrPoints[0].x;
-  for i:=1 to tp-1 do begin
-    if(arrPoints[i].x < min) then
-      min := arrPoints[i].x;
-  end;
-  Result := min;
-end;
-
-function TInterpolation.limSuperior(): Double;
-var
-  i: Integer;
-  max: Double;
-begin
-  max := arrPoints[0].x;
-  for i:=1 to tp-1 do begin
-    if(arrPoints[i].x > max) then
-      max := arrPoints[i].x;
-  end;
-  Result := max;
 end;
 
 end.
