@@ -185,6 +185,7 @@ object Form1: TForm1
     Title.Text.Strings = (
       'TAChart'
     )
+    Toolset = ChartToolset1
     object Chart1LineSeries1: TLineSeries
       LinePen.Color = clRed
     end
@@ -204,6 +205,15 @@ object Form1: TForm1
       Active = False
       OnCalculate = Chart1FuncSeries2Calculate
       Pen.Color = clBlue
+    end
+  end
+  object ChartToolset1: TChartToolset
+    left = 313
+    top = 364
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+      Shift = [ssLeft]
+    end
+    object ChartToolset1DataPointHintTool1: TDataPointHintTool
     end
   end
 end
