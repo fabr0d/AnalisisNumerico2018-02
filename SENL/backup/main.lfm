@@ -38,7 +38,7 @@ object Form1: TForm1
     Height = 23
     Top = 44
     Width = 80
-    TabOrder = 1
+    TabOrder = 2
     Text = '(x^2)/88'
   end
   object a: TLabel
@@ -62,7 +62,7 @@ object Form1: TForm1
     Height = 23
     Top = 8
     Width = 80
-    TabOrder = 2
+    TabOrder = 3
     Text = '2'
   end
   object EdtB: TEdit
@@ -70,7 +70,7 @@ object Form1: TForm1
     Height = 23
     Top = 44
     Width = 80
-    TabOrder = 3
+    TabOrder = 4
     Text = '7'
   end
   object Error: TLabel
@@ -86,7 +86,7 @@ object Form1: TForm1
     Height = 23
     Top = 8
     Width = 80
-    TabOrder = 4
+    TabOrder = 5
     Text = '0.00001'
   end
   object Metodo: TLabel
@@ -103,7 +103,7 @@ object Form1: TForm1
     Top = 44
     Width = 100
     ItemHeight = 15
-    TabOrder = 5
+    TabOrder = 6
     Text = 'SeleccioneMetodo'
   end
   object BtnEjecutar: TButton
@@ -113,11 +113,11 @@ object Form1: TForm1
     Width = 75
     Caption = 'BtnEjecutar'
     OnClick = BtnEjecutarClick
-    TabOrder = 6
+    TabOrder = 7
   end
   object StringGrid1: TStringGrid
     Left = 432
-    Height = 472
+    Height = 128
     Top = 0
     Width = 336
     AutoFillColumns = True
@@ -143,7 +143,7 @@ object Form1: TForm1
         Width = 68
       end>
     FixedCols = 0
-    TabOrder = 7
+    TabOrder = 8
     ColWidths = (
       66
       66
@@ -185,7 +185,6 @@ object Form1: TForm1
     Title.Text.Strings = (
       'TAChart'
     )
-    Toolset = ChartToolset1
     object Chart1LineSeries1: TLineSeries
       LinePen.Color = clRed
     end
@@ -207,11 +206,12 @@ object Form1: TForm1
       Pen.Color = clBlue
     end
   end
-  object ChartToolset1: TChartToolset
-    left = 313
-    top = 364
-    object ChartToolset1DataPointClickTool1: TDataPointClickTool
-      Shift = [ssLeft]
-    end
+  object GraphicScroll: TPanel
+    Left = 432
+    Height = 322
+    Top = 144
+    Width = 338
+    ParentColor = False
+    TabOrder = 1
   end
 end

@@ -20,6 +20,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="mainInterpolation"/>
         <IsVisibleTab Value="True"/>
+        <TopLine Value="46"/>
         <CursorPos X="69" Y="9"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>

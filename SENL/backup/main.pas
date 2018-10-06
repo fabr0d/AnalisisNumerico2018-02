@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, TATools,
   TAChartListbox, TANavigation, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ColorBox, ExtCtrls, senl, ParseMath;
+  Grids, ColorBox, ExtCtrls, Menus, senl, ParseMath, Types;
 
 type
 
@@ -22,8 +22,6 @@ type
     Chart1LineSeries1: TLineSeries;
     BtnEjecutar: TButton;
     CBsenl: TComboBox;
-    ChartToolset1: TChartToolset;
-    ChartToolset1DataPointClickTool1: TDataPointClickTool;
     EdtFuncion1: TEdit;
     EdtFuncion2: TEdit;
     EdtA: TEdit;
@@ -35,10 +33,13 @@ type
     b: TLabel;
     Error: TLabel;
     Metodo: TLabel;
+    GraphicScroll: TPanel;
     StringGrid1: TStringGrid;
     procedure BtnEjecutarClick(Sender: TObject);
     procedure Chart1FuncSeries1Calculate(const AX: Double; out AY: Double);
     procedure Chart1FuncSeries2Calculate(const AX: Double; out AY: Double);
+    //procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
+      APoint: TPoint);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private

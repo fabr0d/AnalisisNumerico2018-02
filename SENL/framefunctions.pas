@@ -62,6 +62,7 @@ begin
   with frmGraphics do begin
      if not Assigned( FuncSeries ) then begin
         FuncSeries:= TFuncSeries.Create( charFunction );
+        FuncSeries.Tag:= frmGraphics.GFMaxPosition;
         charFunction.AddSeries( FuncSeries );
      end;
 

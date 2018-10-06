@@ -1,177 +1,159 @@
 object Form1: TForm1
-  Left = 0
-  Height = 464
-  Top = 0
-  Width = 748
-  ClientHeight = 464
-  ClientWidth = 748
+  Left = 826
+  Height = 556
+  Top = 397
+  Width = 610
+  ActiveControl = ediFunction
+  Caption = 'Generalized Newton'
+  ClientHeight = 556
+  ClientWidth = 610
+  OnCreate = FormCreate
   Visible = False
   object Label1: TLabel
-    Left = 28
+    Left = 76
     Height = 15
-    Top = 16
-    Width = 118
-    Caption = 'NumeroDeFunciones :'
+    Top = 80
+    Width = 52
+    Caption = 'Funcion : '
     ParentColor = False
   end
-  object EditNumDeFuncs: TEdit
-    Left = 152
+  object ediFunction: TEdit
+    Left = 144
     Height = 23
-    Top = 16
-    Width = 80
+    Top = 80
+    Width = 288
     TabOrder = 0
   end
-  object Label2: TLabel
-    Left = 240
-    Height = 15
-    Top = 16
-    Width = 92
-    Caption = 'VariablesUsadas : '
-    ParentColor = False
-  end
-  object EditVarsUsadas: TEdit
-    Left = 340
+  object cmbFunctions: TComboBox
+    Left = 456
     Height = 23
-    Top = 16
+    Top = 80
     Width = 80
+    ItemHeight = 15
     TabOrder = 1
   end
-  object ButtonDefNumDeFuncyVars: TButton
-    Left = 432
-    Height = 25
-    Top = 16
-    Width = 80
-    Caption = 'Definir'
-    TabOrder = 2
-  end
-  object Label3: TLabel
-    Left = 45
-    Height = 15
-    Top = 72
-    Width = 101
-    Caption = 'DefinirFunciones :  '
-    ParentColor = False
-  end
-  object EditFuncX: TEdit
-    Left = 152
+  object ediNumFunc: TEdit
+    Left = 144
     Height = 23
-    Top = 72
-    Width = 320
+    Top = 16
+    Width = 52
+    TabOrder = 2
+    Text = '2'
+  end
+  object btnSetGlobals: TButton
+    Left = 384
+    Height = 24
+    Top = 47
+    Width = 56
+    Caption = 'Definir'
+    OnClick = btnSetGlobalsClick
     TabOrder = 3
   end
-  object Label4: TLabel
-    Left = 488
-    Height = 15
-    Top = 48
-    Width = 161
-    Caption = 'SeleccionarNumeroDeFuncion'
-    ParentColor = False
-  end
-  object ComboBoxNumFunc: TComboBox
-    Left = 488
+  object btnSetFunction: TButton
+    Left = 544
     Height = 23
-    Top = 72
-    Width = 100
-    ItemHeight = 15
+    Top = 80
+    Width = 64
+    Caption = 'Definir'
+    OnClick = btnSetFunctionClick
     TabOrder = 4
   end
-  object StringGrid1: TStringGrid
-    Left = 40
-    Height = 136
-    Top = 112
-    Width = 432
-    AutoFillColumns = True
-    ColCount = 1
-    FixedCols = 0
+  object btnCalculate: TButton
+    Left = 438
+    Height = 24
+    Top = 280
+    Width = 120
+    Caption = 'NewthonRaphson'
+    OnClick = btnCalculateClick
     TabOrder = 5
-    ColWidths = (
-      428
-    )
-    Cells = (
-      1
-      0
-      0
-      'Funciones'
-    )
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 15
+    Top = 16
+    Width = 126
+    Caption = 'Numero de Funciones : '
+    ParentColor = False
   end
   object Label5: TLabel
-    Left = 16
+    Left = 112
     Height = 15
-    Top = 272
-    Width = 23
-    Caption = 'Xo : '
+    Top = 232
+    Width = 25
+    Caption = 'Xo ='
     ParentColor = False
   end
-  object EditXsubCero: TEdit
-    Left = 40
+  object ediXo: TEdit
+    Left = 144
     Height = 23
-    Top = 272
-    Width = 128
+    Top = 232
+    Width = 88
     TabOrder = 6
   end
-  object ComboBoxSelecVar: TComboBox
-    Left = 40
+  object btnSetXo: TButton
+    Left = 176
     Height = 23
-    Top = 304
-    Width = 100
-    ItemHeight = 15
+    Top = 296
+    Width = 56
+    Caption = 'Definir'
+    OnClick = btnSetXoClick
     TabOrder = 7
   end
-  object ButtonMandaVar: TButton
-    Left = 45
-    Height = 25
-    Top = 336
-    Width = 75
-    Caption = 'Definir'
+  object EdiRawVars: TEdit
+    Left = 144
+    Height = 23
+    Top = 48
+    Width = 152
     TabOrder = 8
   end
-  object ButtonMandaFunc: TButton
-    Left = 616
-    Height = 25
-    Top = 72
-    Width = 75
-    Caption = 'Definir'
+  object Label6: TLabel
+    Left = 45
+    Height = 15
+    Top = 48
+    Width = 89
+    Caption = 'Variables A Usar: '
+    ParentColor = False
+  end
+  object cmbXo: TComboBox
+    Left = 144
+    Height = 23
+    Top = 264
+    Width = 88
+    ItemHeight = 15
     TabOrder = 9
   end
-  object StringGrid2: TStringGrid
-    Left = 176
-    Height = 120
-    Top = 272
-    Width = 72
+  object stgShowFx: TStringGrid
+    Left = 144
+    Height = 96
+    Top = 112
+    Width = 344
     AutoFillColumns = True
     ColCount = 1
+    DefaultColWidth = 382
     FixedCols = 0
+    RowCount = 3
     TabOrder = 10
     ColWidths = (
-      68
+      340
     )
     Cells = (
       1
       0
       0
-      'Variables'
+      '                                          Funciones'
     )
   end
-  object Label6: TLabel
-    Left = 584
-    Height = 15
-    Top = 272
-    Width = 53
-    Caption = 'Respuesta'
-    ParentColor = False
-  end
-  object StringGrid3: TStringGrid
-    Left = 520
-    Height = 100
-    Top = 304
-    Width = 200
-    AutoFillColumns = True
+  object stgResults: TStringGrid
+    Left = 360
+    Height = 120
+    Top = 312
+    Width = 216
     ColCount = 2
-    RowCount = 4
+    DefaultColWidth = 145
     TabOrder = 11
     ColWidths = (
-      64
-      132
+      66
+      145
     )
     Cells = (
       2
@@ -180,30 +162,99 @@ object Form1: TForm1
       'Variable'
       1
       0
-      'Valor'
+      'valor'
     )
   end
-  object Label7: TLabel
-    Left = 272
+  object stgDebug: TStringGrid
+    Left = 24
+    Height = 142
+    Top = 368
+    Width = 328
+    AutoFillColumns = True
+    ColCount = 3
+    DefaultColWidth = 150
+    TabOrder = 12
+    Visible = False
+    ColWidths = (
+      21
+      151
+      152
+    )
+    Cells = (
+      3
+      0
+      0
+      'n'
+      1
+      0
+      'xi'
+      2
+      0
+      'Error'
+    )
+  end
+  object stgShowXo: TStringGrid
+    Left = 240
+    Height = 119
+    Top = 232
+    Width = 104
+    ColCount = 1
+    DefaultColWidth = 100
+    FixedCols = 0
+    TabOrder = 13
+    Cells = (
+      1
+      0
+      0
+      'PuntoInicial'
+    )
+  end
+  object Label2: TLabel
+    Left = 307
     Height = 15
-    Top = 338
-    Width = 31
-    Caption = 'Error: '
+    Top = 48
+    Width = 66
+    Caption = 'Ejemplo : x y'
     ParentColor = False
   end
-  object ButtonRunAll: TButton
-    Left = 416
-    Height = 25
-    Top = 336
-    Width = 75
-    Caption = 'Go!'
-    TabOrder = 12
+  object Label4: TLabel
+    Left = 448
+    Height = 15
+    Top = 64
+    Width = 101
+    Caption = 'NumeroDeFuncion'
+    ParentColor = False
   end
-  object EditError: TEdit
-    Left = 320
+  object Label7: TLabel
+    Left = 53
+    Height = 15
+    Top = 264
+    Width = 84
+    Caption = 'Asignar variable'
+    ParentColor = False
+  end
+  object CheckBox1: TCheckBox
+    Left = 440
+    Height = 19
+    Top = 256
+    Width = 118
+    Caption = 'MostrarIteraciones'
+    TabOrder = 14
+  end
+  object TEditNewtonError: TEdit
+    Left = 440
     Height = 23
-    Top = 338
+    Top = 228
     Width = 80
-    TabOrder = 13
+    TabOrder = 15
+    Text = '0.000001'
+  end
+  object Error: TLabel
+    Left = 398
+    Height = 15
+    Top = 228
+    Width = 25
+    Caption = 'Error'
+    ParentColor = False
   end
 end
