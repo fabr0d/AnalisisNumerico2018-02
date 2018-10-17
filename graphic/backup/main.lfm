@@ -45,7 +45,6 @@ object frmGraphics: TfrmGraphics
     Title.Text.Strings = (
       'TAChart'
     )
-    Toolset = ChartToolset1
     Align = alClient
     Color = clWhite
     object charFunctionFuncSeries1: TFuncSeries
@@ -75,11 +74,5 @@ object frmGraphics: TfrmGraphics
     Width = 787
     Panels = <>
     SimpleText = 'XD'
-  end
-  object ChartToolset1: TChartToolset
-    left = 624
-    top = 272
-    object ChartToolset1PanDragTool1: TPanDragTool
-    end
   end
 end

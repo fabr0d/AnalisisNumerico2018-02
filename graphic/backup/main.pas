@@ -17,8 +17,6 @@ type
     charFunctionConstantLine1: TConstantLine;
     charFunctionConstantLine2: TConstantLine;
     charFunctionFuncSeries1: TFuncSeries;
-    ChartToolset1: TChartToolset;
-    ChartToolset1PanDragTool1: TPanDragTool;
     GraphicScroll: TPanel;
     StatusBar1: TStatusBar;
     procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;

@@ -5,7 +5,7 @@ unit SENL;
 interface
 
 uses
-  Classes, SysUtils, math, ParseMath;
+  Classes, SysUtils, math, ParseMath, Dialogs;
 
 type
     SENLFunciones = class
@@ -105,7 +105,7 @@ var Error: Real;
 begin
    Parse.Expression:= fx;
    xi:= Infinity;
-   if f(a)*f(b) >= 0 then Result:= 'NoCumpleBolzano'
+   if f(a)*f(b) >= 0 then ShowMessage('no cumple')
    else
    begin
    repeat
@@ -135,22 +135,22 @@ begin
    xi:= Infinity;
    if f(a)*f(b) >= 0 then Result:= 'NoCumpleBolzano'
    else
-   begin
-   repeat
-     xn:= xi;
-     xi:= a - (f(a)*((b-a)/(f(b)-f(a))));
-     if f(xi) * f(a) < 0 then
-        b:= xi
-     else
-        a:= xi;
-     Error:= abs(xi - xn) ;
-     Sequence.Add(FloatToStr(xi));
-     NError.Add(FloatToStr(Error));
-   until (Error <= ErrorAllowed );
-   NError.Delete(1);
-   NError.Insert(1,'');
-   Result:= FloatToStr(xi);
-   end;
+     begin
+       repeat
+         xn:= xi;
+         xi:= a - (f(a)*((b-a)/(f(b)-f(a))));
+         if f(xi) * f(a) < 0 then
+            b:= xi
+         else
+            a:= xi;
+         Error:= abs(xi - xn) ;
+         Sequence.Add(FloatToStr(xi));
+         NError.Add(FloatToStr(Error));
+       until (Error <= ErrorAllowed );
+       NError.Delete(1);
+       NError.Insert(1,'');
+       Result:= FloatToStr(xi);
+     end;
 end;
 
 function SENLFunciones.Newton(): string;
@@ -175,14 +175,17 @@ function SENLFunciones.Secante(): string;
 var Error: Real;
     xn: Real;
     h: Real;
+    Error2: Real;
 begin
    Parse.Expression:= fx;
    h:= ErrorAllowed/10;
    xi:= a;
    repeat
      xn:= xi;
+     //ShowMessage(FloatToStr(xn));
      xi:= xn - ((2*h*f(xn))/(f(xn+h)-f(xn-h)));
      Error:= abs(xi - xn) ;
+     ShowMessage(Error);
      Sequence.Add(FloatToStr(xi));
      NError.Add(FloatToStr(Error));
    until (Error <= ErrorAllowed );
@@ -194,6 +197,7 @@ end;
 function SENLFunciones.PuntoFijo(): string;
 var Error: Real;
     xn: Real;
+    Error2: Real;
 begin
    Parse.Expression:= fx;
    xi:= a;

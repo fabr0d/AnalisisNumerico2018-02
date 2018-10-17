@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, TATools,
   TAChartListbox, TANavigation, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ColorBox, ExtCtrls, Menus, senl, ParseMath, Types;
+  Grids, ColorBox, ExtCtrls, Menus, senl, ParseMath, Types, math;
 
 type
 
@@ -22,6 +22,10 @@ type
     Chart1LineSeries1: TLineSeries;
     BtnEjecutar: TButton;
     CBsenl: TComboBox;
+    EditF2A: TEdit;
+    EditF2B: TEdit;
+    EditF1A: TEdit;
+    EditF1B: TEdit;
     EdtFuncion1: TEdit;
     EdtFuncion2: TEdit;
     EdtA: TEdit;
@@ -33,7 +37,6 @@ type
     b: TLabel;
     Error: TLabel;
     Metodo: TLabel;
-    GraphicScroll: TPanel;
     StringGrid1: TStringGrid;
     procedure BtnEjecutarClick(Sender: TObject);
     procedure Chart1FuncSeries1Calculate(const AX: Double; out AY: Double);
@@ -99,6 +102,18 @@ begin
        fx:= '(' + EdtFuncion1.Text + ')-(' + EdtFuncion2.Text + ')';
        ErrorAllowed:= StrToFloat( EdtError.Text );
        MethodType:= Int64(CBsenl.Items.Objects[CBsenl.ItemIndex]);
+       with Chart1FuncSeries1.DomainExclusions do begin
+        if EditF1A.Text <> '-inf' then
+           AddRange(NegInfinity,StrToFloat(EditF1A.Text));
+        if EditF1B.Text <> 'inf' then
+           AddRange(StrToFloat(EditF1B.Text),Infinity);
+       end;
+       with Chart1FuncSeries1.DomainExclusions do begin
+        if EditF2A.Text <> '-inf' then
+           AddRange(NegInfinity,StrToFloat(EditF2A.Text));
+        if EditF2B.Text <> 'inf' then
+           AddRange(StrToFloat(EditF2B.Text),Infinity);
+       end;
        s:= Execute;
        StringGrid1.RowCount:= Sequence.Count;
        StringGrid1.Cols[1].Assign( ValuesA );

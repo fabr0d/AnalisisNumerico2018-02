@@ -5,7 +5,7 @@ unit SENL;
 interface
 
 uses
-  Classes, SysUtils, math, ParseMath;
+  Classes, SysUtils, math, ParseMath, Dialogs;
 
 type
     SENLFunciones = class
@@ -105,7 +105,7 @@ var Error: Real;
 begin
    Parse.Expression:= fx;
    xi:= Infinity;
-   if f(a)*f(b) >= 0 then Result:= 'NoCumpleBolzano'
+   if f(a)*f(b) >= 0 then ShowMessage('no cumple')
    else
    begin
    repeat
@@ -175,14 +175,17 @@ function SENLFunciones.Secante(): string;
 var Error: Real;
     xn: Real;
     h: Real;
+    Error2: Real;
 begin
    Parse.Expression:= fx;
    h:= ErrorAllowed/10;
    xi:= a;
    repeat
      xn:= xi;
+     //ShowMessage(FloatToStr(xn));
      xi:= xn - ((2*h*f(xn))/(f(xn+h)-f(xn-h)));
      Error:= abs(xi - xn) ;
+     ShowMessage(FloatToStr(Error));
      Sequence.Add(FloatToStr(xi));
      NError.Add(FloatToStr(Error));
    until (Error <= ErrorAllowed );
@@ -194,6 +197,7 @@ end;
 function SENLFunciones.PuntoFijo(): string;
 var Error: Real;
     xn: Real;
+    Error2: Real;
 begin
    Parse.Expression:= fx;
    xi:= a;

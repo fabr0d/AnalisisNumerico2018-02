@@ -31,18 +31,18 @@ object Form1: TForm1
     Top = 8
     Width = 80
     TabOrder = 0
-    Text = 'sin(x)'
+    Text = '1/x'
   end
   object EdtFuncion2: TEdit
     Left = 71
     Height = 23
     Top = 44
     Width = 80
-    TabOrder = 2
-    Text = '(x^2)/88'
+    TabOrder = 1
+    Text = '-x'
   end
   object a: TLabel
-    Left = 160
+    Left = 344
     Height = 15
     Top = 8
     Width = 25
@@ -50,7 +50,7 @@ object Form1: TForm1
     ParentColor = False
   end
   object b: TLabel
-    Left = 160
+    Left = 344
     Height = 15
     Top = 44
     Width = 7
@@ -58,23 +58,23 @@ object Form1: TForm1
     ParentColor = False
   end
   object EdtA: TEdit
-    Left = 208
+    Left = 392
     Height = 23
     Top = 8
     Width = 80
-    TabOrder = 3
+    TabOrder = 2
     Text = '2'
   end
   object EdtB: TEdit
-    Left = 176
+    Left = 360
     Height = 23
     Top = 44
     Width = 80
-    TabOrder = 4
+    TabOrder = 3
     Text = '7'
   end
   object Error: TLabel
-    Left = 308
+    Left = 492
     Height = 15
     Top = 8
     Width = 25
@@ -82,15 +82,15 @@ object Form1: TForm1
     ParentColor = False
   end
   object EdtError: TEdit
-    Left = 340
+    Left = 524
     Height = 23
     Top = 8
     Width = 80
-    TabOrder = 5
+    TabOrder = 4
     Text = '0.00001'
   end
   object Metodo: TLabel
-    Left = 272
+    Left = 456
     Height = 15
     Top = 44
     Width = 42
@@ -98,12 +98,12 @@ object Form1: TForm1
     ParentColor = False
   end
   object CBsenl: TComboBox
-    Left = 320
+    Left = 504
     Height = 23
     Top = 44
     Width = 100
     ItemHeight = 15
-    TabOrder = 6
+    TabOrder = 5
     Text = 'SeleccioneMetodo'
   end
   object BtnEjecutar: TButton
@@ -113,12 +113,12 @@ object Form1: TForm1
     Width = 75
     Caption = 'BtnEjecutar'
     OnClick = BtnEjecutarClick
-    TabOrder = 7
+    TabOrder = 6
   end
   object StringGrid1: TStringGrid
     Left = 432
     Height = 128
-    Top = 0
+    Top = 104
     Width = 336
     AutoFillColumns = True
     Columns = <    
@@ -143,7 +143,7 @@ object Form1: TForm1
         Width = 68
       end>
     FixedCols = 0
-    TabOrder = 8
+    TabOrder = 7
     ColWidths = (
       66
       66
@@ -206,12 +206,36 @@ object Form1: TForm1
       Pen.Color = clBlue
     end
   end
-  object GraphicScroll: TPanel
-    Left = 432
-    Height = 322
-    Top = 144
-    Width = 338
-    ParentColor = False
-    TabOrder = 1
+  object EditF1A: TEdit
+    Left = 176
+    Height = 23
+    Top = 8
+    Width = 40
+    TabOrder = 9
+    Text = '-inf'
+  end
+  object EditF1B: TEdit
+    Left = 224
+    Height = 23
+    Top = 8
+    Width = 40
+    TabOrder = 10
+    Text = 'inf'
+  end
+  object EditF2A: TEdit
+    Left = 176
+    Height = 23
+    Top = 44
+    Width = 40
+    TabOrder = 11
+    Text = '-inf'
+  end
+  object EditF2B: TEdit
+    Left = 224
+    Height = 23
+    Top = 44
+    Width = 40
+    TabOrder = 12
+    Text = 'inf'
   end
 end

@@ -19,6 +19,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="mainInterpolation"/>
+        <TopLine Value="9"/>
         <CursorPos X="69" Y="9"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>
@@ -30,6 +31,7 @@
         <UnitName Value="LogicInterpolation"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
+        <TopLine Value="36"/>
         <CursorPos X="30" Y="9"/>
         <UsageCount Value="37"/>
         <Loaded Value="True"/>
