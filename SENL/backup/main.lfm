@@ -8,6 +8,7 @@ object Form1: TForm1
   ClientHeight = 494
   ClientWidth = 784
   OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
   Visible = False
   object Funcion1: TLabel
     Left = 8
@@ -31,7 +32,7 @@ object Form1: TForm1
     Top = 8
     Width = 80
     TabOrder = 0
-    Text = 'sin(x)'
+    Text = '1/x'
   end
   object EdtFuncion2: TEdit
     Left = 71
@@ -39,7 +40,7 @@ object Form1: TForm1
     Top = 44
     Width = 80
     TabOrder = 1
-    Text = '(x^2)/88'
+    Text = '-x'
   end
   object a: TLabel
     Left = 344
@@ -124,38 +125,38 @@ object Form1: TForm1
     Columns = <    
       item
         Title.Caption = 'n'
-        Width = 66
+        Width = 63
       end    
       item
         Title.Caption = 'a'
-        Width = 66
+        Width = 63
       end    
       item
         Title.Caption = 'b'
-        Width = 66
+        Width = 63
       end    
       item
         Title.Caption = 'x'
-        Width = 66
+        Width = 63
       end    
       item
         Title.Caption = 'Error'
-        Width = 68
+        Width = 63
       end>
     FixedCols = 0
     TabOrder = 7
     ColWidths = (
-      66
-      66
-      66
-      66
-      68
+      63
+      63
+      63
+      63
+      63
     )
   end
   object Chart1: TChart
-    Left = 5
+    Left = 0
     Height = 368
-    Top = 104
+    Top = 96
     Width = 420
     AxisList = <    
       item
@@ -185,6 +186,7 @@ object Form1: TForm1
     Title.Text.Strings = (
       'TAChart'
     )
+    Toolset = ChartToolset1
     object Chart1LineSeries1: TLineSeries
       LinePen.Color = clRed
     end
@@ -237,5 +239,18 @@ object Form1: TForm1
     Width = 40
     TabOrder = 12
     Text = 'inf'
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 471
+    Width = 784
+    Panels = <>
+  end
+  object ChartToolset1: TChartToolset
+    left = 273
+    top = 335
+    object ChartToolset1DataPointClickTool1: TDataPointClickTool
+    end
   end
 end

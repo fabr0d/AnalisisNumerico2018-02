@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, TATools,
   TAChartListbox, TANavigation, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  Grids, ColorBox, ExtCtrls, Menus, senl, ParseMath, Types, math;
+  Grids, ColorBox, ExtCtrls, Menus, ComCtrls, senl, ParseMath, Types, math,TAChartUtils;
 
 type
 
@@ -22,6 +22,8 @@ type
     Chart1LineSeries1: TLineSeries;
     BtnEjecutar: TButton;
     CBsenl: TComboBox;
+    ChartToolset1: TChartToolset;
+    ChartToolset1DataPointClickTool1: TDataPointClickTool;
     EditF2A: TEdit;
     EditF2B: TEdit;
     EditF1A: TEdit;
@@ -37,10 +39,13 @@ type
     b: TLabel;
     Error: TLabel;
     Metodo: TLabel;
+    StatusBar1: TStatusBar;
     StringGrid1: TStringGrid;
     procedure BtnEjecutarClick(Sender: TObject);
     procedure Chart1FuncSeries1Calculate(const AX: Double; out AY: Double);
     procedure Chart1FuncSeries2Calculate(const AX: Double; out AY: Double);
+    procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
+      APoint: TPoint);
     //procedure ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool;
       //APoint: TPoint);
     procedure FormCreate(Sender: TObject);
@@ -154,6 +159,24 @@ end;
 procedure TForm1.Chart1FuncSeries2Calculate(const AX: Double; out AY: Double);
 begin
   AY := g(AX);
+end;
+
+procedure TForm1.ChartToolset1DataPointClickTool1PointClick(ATool: TChartTool; APoint: TPoint);
+var
+  x, y: Double;
+  DPoint: TDoublePoint;
+begin
+  DPoint:= ChartFunctions.ImageToGraph(APoint);
+  with ATool as TDatapointClickTool do
+    if (Series is TLineSeries) then
+      with TLineSeries(Series) do begin
+        x := GetXValue(PointIndex);
+        y := GetYValue(PointIndex);
+        ShowMessage(FloatToStr(DPoint.X) + ',' + FloatToStr(DPoint.Y));
+        Statusbar1.SimpleText := Format('%s: x = %f, y = %f', [Title, x, y]);
+      end
+    else
+      Statusbar1.SimpleText := '';
 end;
 
 end.
