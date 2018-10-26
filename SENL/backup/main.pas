@@ -166,7 +166,7 @@ var
   x, y: Double;
   DPoint: TDoublePoint;
 begin
-  DPoint:= ChartFunctions.ImageToGraph(APoint);
+  DPoint:= Chart1.ImageToGraph(APoint);
   with ATool as TDatapointClickTool do
     if (Series is TLineSeries) then
       with TLineSeries(Series) do begin

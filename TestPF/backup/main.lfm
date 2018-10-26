@@ -1,0 +1,109 @@
+object Form1: TForm1
+  Left = 0
+  Height = 465
+  Top = 0
+  Width = 834
+  Caption = 'Form1'
+  ClientHeight = 465
+  ClientWidth = 834
+  Visible = False
+  object Panel1: TPanel
+    Left = 3
+    Height = 310
+    Top = 0
+    Width = 586
+    Caption = 'Panel1'
+    ClientHeight = 310
+    ClientWidth = 586
+    TabOrder = 0
+    object Chart1: TChart
+      Left = -6
+      Height = 312
+      Top = 0
+      Width = 590
+      AxisList = <      
+        item
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+          Title.LabelBrush.Style = bsClear
+        end      
+        item
+          Alignment = calBottom
+          Marks.LabelBrush.Style = bsClear
+          Minors = <>
+          Title.LabelBrush.Style = bsClear
+        end>
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      object Chart1ConstantLine1: TConstantLine
+        Position = 0
+      end
+      object Chart1ConstantLine2: TConstantLine
+        LineStyle = lsVertical
+        Position = 0
+      end
+      object Chart1FuncSeries1: TFuncSeries
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 592
+    Height = 310
+    Top = 0
+    Width = 242
+    Caption = 'Datos grabados]'
+    ClientHeight = 310
+    ClientWidth = 242
+    TabOrder = 1
+    object StringGrid1: TStringGrid
+      Left = 0
+      Height = 312
+      Top = 0
+      Width = 242
+      AutoFillColumns = True
+      ColCount = 3
+      Columns = <      
+        item
+          Title.Caption = 'Variable'
+          Width = 79
+        end      
+        item
+          Title.Caption = 'Value'
+          Width = 79
+        end      
+        item
+          Title.Caption = 'Type'
+          Width = 80
+        end>
+      FixedCols = 0
+      TabOrder = 0
+      ColWidths = (
+        79
+        79
+        80
+      )
+    end
+  end
+  object Panel3: TPanel
+    Left = 6
+    Height = 147
+    Top = 315
+    Width = 583
+    Caption = 'Consola'
+    TabOrder = 2
+  end
+  object Panel4: TPanel
+    Left = 593
+    Height = 149
+    Top = 315
+    Width = 237
+    Caption = 'Historial de consola'
+    TabOrder = 3
+  end
+end

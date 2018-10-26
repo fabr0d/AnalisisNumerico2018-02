@@ -3,6 +3,7 @@ object Form2: TForm2
   Height = 59
   Top = 0
   Width = 329
+  ActiveControl = ediF
   Caption = 'Form2'
   ClientHeight = 59
   ClientWidth = 329
