@@ -8,7 +8,6 @@ object Form1: TForm1
   ClientHeight = 494
   ClientWidth = 784
   OnCreate = FormCreate
-  LCLVersion = '1.8.4.0'
   Visible = False
   object Funcion1: TLabel
     Left = 8
@@ -125,32 +124,32 @@ object Form1: TForm1
     Columns = <    
       item
         Title.Caption = 'n'
-        Width = 63
+        Width = 66
       end    
       item
         Title.Caption = 'a'
-        Width = 63
+        Width = 66
       end    
       item
         Title.Caption = 'b'
-        Width = 63
+        Width = 66
       end    
       item
         Title.Caption = 'x'
-        Width = 63
+        Width = 66
       end    
       item
         Title.Caption = 'Error'
-        Width = 63
+        Width = 68
       end>
     FixedCols = 0
     TabOrder = 7
     ColWidths = (
-      63
-      63
-      63
-      63
-      63
+      66
+      66
+      66
+      66
+      68
     )
   end
   object Chart1: TChart

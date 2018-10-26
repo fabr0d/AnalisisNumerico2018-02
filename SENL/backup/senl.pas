@@ -185,7 +185,7 @@ begin
      //ShowMessage(FloatToStr(xn));
      xi:= xn - ((2*h*f(xn))/(f(xn+h)-f(xn-h)));
      Error:= abs(xi - xn) ;
-     ShowMessage(Error);
+     ShowMessage(FloatToStr(Error));
      Sequence.Add(FloatToStr(xi));
      NError.Add(FloatToStr(Error));
    until (Error <= ErrorAllowed );

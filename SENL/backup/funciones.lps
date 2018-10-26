@@ -4,13 +4,13 @@
     <PathDelim Value="\"/>
     <Version Value="10"/>
     <BuildModes Active="Default"/>
-    <Units Count="8">
+    <Units Count="10">
       <Unit0>
         <Filename Value="funciones.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="41" Y="17"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,10 +19,9 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="152"/>
-        <CursorPos X="70" Y="175"/>
-        <UsageCount Value="36"/>
+        <TopLine Value="43"/>
+        <CursorPos X="16" Y="43"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -31,17 +30,18 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="senl.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="SENL"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="105"/>
-        <CursorPos X="27" Y="108"/>
-        <UsageCount Value="36"/>
+        <TopLine Value="26"/>
+        <CursorPos X="15" Y="20"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -74,12 +74,24 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="73"/>
+        <TopLine Value="46"/>
         <CursorPos X="10" Y="46"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
+      <Unit8>
+        <Filename Value="..\Trapecio\parsemath.pas"/>
+        <UnitName Value="ParseMath"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="..\Trapecio\MetodosDeIntegracion.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24"/>
+        <UsageCount Value="10"/>
+      </Unit9>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>

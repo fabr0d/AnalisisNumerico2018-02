@@ -10,8 +10,7 @@ uses
 type
     SENLFunciones = class
     ErrorAllowed: Real;
-    ValuesA, ValuesB, Sequence, NError,
-    MethodList: TStringList;
+    ValuesA, ValuesB, Sequence, NError, MethodList: TStringList;
     MethodType: Integer;
     a: Real;
     b: Real;
