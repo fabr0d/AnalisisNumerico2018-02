@@ -38,9 +38,8 @@
         <Filename Value="senl.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="SENL"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="106"/>
+        <TopLine Value="18"/>
         <CursorPos X="7" Y="18"/>
         <UsageCount Value="44"/>
         <Loaded Value="True"/>
@@ -74,6 +73,7 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="46"/>
         <CursorPos X="10" Y="46"/>
