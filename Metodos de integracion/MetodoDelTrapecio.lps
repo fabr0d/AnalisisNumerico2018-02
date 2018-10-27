@@ -8,7 +8,10 @@
       <Unit0>
         <Filename Value="MetodoDelTrapecio.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="20"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="20"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -16,8 +19,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="15"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -25,18 +27,39 @@
         <Filename Value="parsemath.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit2>
       <Unit3>
         <Filename Value="MetodosDeIntegracionClass.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="68"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="93"/>
+        <CursorPos X="6" Y="68"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit3>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="5" HistoryIndex="4">
+      <Position1>
+        <Filename Value="MetodosDeIntegracionClass.pas"/>
+        <Caret Line="77" Column="18" TopLine="64"/>
+      </Position1>
+      <Position2>
+        <Filename Value="MetodoDelTrapecio.lpr"/>
+        <Caret Line="21"/>
+      </Position2>
+      <Position3>
+        <Filename Value="MetodoDelTrapecio.lpr"/>
+        <Caret Column="26"/>
+      </Position3>
+      <Position4>
+        <Filename Value="main.pas"/>
+      </Position4>
+      <Position5>
+        <Filename Value="MetodosDeIntegracionClass.pas"/>
+        <Caret Line="115" Column="9" TopLine="96"/>
+      </Position5>
+    </JumpHistory>
   </ProjectSession>
 </CONFIG>

@@ -6,7 +6,7 @@
     <General>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="MetodosdeIntegracion-1"/>
+      <Title Value="MetodoDelTrapecio"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
@@ -45,7 +45,7 @@
         <UnitName Value="ParseMath"/>
       </Unit2>
       <Unit3>
-        <Filename Value="MetodosDeIntegracion.pas"/>
+        <Filename Value="MetodosDeIntegracionClass.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit3>
     </Units>

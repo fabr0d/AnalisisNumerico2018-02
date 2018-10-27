@@ -5,7 +5,7 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, MetodosDeIntegracion,
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls, MetodosDeIntegracionClass,
   ParseMath;
 
 type

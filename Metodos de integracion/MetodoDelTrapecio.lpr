@@ -13,7 +13,6 @@ uses
 {$R *.res}
 
 begin
-  Application.Title := 'MetodosdeIntegracion-1';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TForm1, Form1);

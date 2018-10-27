@@ -72,8 +72,8 @@ begin
   tam := n+1; // asignacion del tamaño del array que contendra los puntos
   Sumatoria := 0; //variable que guardara
   SetLength(puntos,tam);
-  h :=(b-a)/n;
-  //ShowMessage(FloatToStr(h));
+  h :=(b-a)/n; //calculo de h
+  //ShowMessage('h: '+FloatToStr(h));
   puntos[0] := a;
   for i := 1 to tam-1 do
   begin
@@ -84,12 +84,42 @@ begin
   begin
     Sumatoria := Sumatoria+f(puntos[j]);
   end;
-  Result := FloatToStr( h * (( ( f(puntos[0]) + f(puntos[tam-1]) )/2) )+Sumatoria);
+  Result := FloatToStr( h * ((((f(puntos[0])+ f(puntos[tam-1]))/2))+Sumatoria));
 end;
 
 function FuncionesMetodosIntegracion.simpson34():String;
+var
+  h,SumatoriaPar,SumatoriaImpar : Real;
+  i,j,k,tam : Integer;
+  puntos: array of Real;
 begin
-
+  Parse.Expression:= fx; // parse de la funcion
+  tam := 2*n+1; // asignacion del tamaño del array que contendra los puntos
+  SumatoriaPar := 0; //variables que guardaran sumatoria de pares e impares
+  SumatoriaImpar := 0;
+  SetLength(puntos,tam);
+  h :=(b-a)/(2*n); //calculo de h
+  //ShowMessage('h: '+FloatToStr(h));
+  puntos[0] := a;
+  for i := 1 to tam-1 do
+  begin
+    puntos[i] := puntos[i-1]+h;
+  end;
+  //Sumatoria de los valores pares
+  j := 1;
+  while j*2 <= (tam-2) do
+  begin
+    SumatoriaPar := SumatoriaPar+f(puntos[j*2]);
+    j := j+1;
+  end;
+  //Sumatoria de los valores impares
+  k := 0;
+  while (k*2)+1 <= (tam-2) do
+  begin
+    SumatoriaImpar := SumatoriaImpar+f(puntos[(k*2)+1]);
+    k := k+1;
+  end;
+  Result := FloatToStr( (h/3)*( f(puntos[0])+ f(puntos[tam-1])+(SumatoriaPar*2)+(SumatoriaImpar*4)) );
 end;
 
 end.
