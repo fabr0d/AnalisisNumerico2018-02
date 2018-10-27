@@ -101,7 +101,8 @@ begin
   Parse1.Expression:= EdtFuncion1.Text;
   Parse2.Expression:= EdtFuncion2.Text;
   AMethods:= SENLFunciones.create;
-  with AMethods do begin
+  with AMethods do
+    begin
        a:= StrToFloat( EdtA.Text );
        b:= StrToFloat( EdtB.Text );
        fx:= '(' + EdtFuncion1.Text + ')-(' + EdtFuncion2.Text + ')';

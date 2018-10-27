@@ -27,7 +27,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="4">
       <Unit0>
         <Filename Value="MetodoDelTrapecio.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -40,19 +40,14 @@
         <ResourceBaseClass Value="Form"/>
       </Unit1>
       <Unit2>
-        <Filename Value="classtrapecio.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="classTrapecio"/>
-      </Unit2>
-      <Unit3>
         <Filename Value="parsemath.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
-      </Unit3>
-      <Unit4>
+      </Unit2>
+      <Unit3>
         <Filename Value="MetodosDeIntegracion.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit4>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

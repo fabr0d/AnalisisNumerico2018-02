@@ -64,16 +64,16 @@ end;
 
 function FuncionesMetodosIntegracion.trapecio():String;
 var
-  h: Real;
-  i,j: Integer;
+  h,Sumatoria : Real;
+  i,j,tam : Integer;
   puntos: array of Real;
-  tam: Integer;
-  Sumatoria: Real;
 begin
+  Parse.Expression:= fx;
   tam := n+1;
   Sumatoria := 0;
   SetLength(puntos,tam);
   h :=(b-a)/n;
+  ShowMessage(FloatToStr(h));
   puntos[0] := a;
   for i := 1 to tam-1 do
   begin
@@ -84,8 +84,7 @@ begin
   begin
     Sumatoria := Sumatoria+f(puntos[j]);
   end;
-  Result := FloatToStr(h*(((f(puntos[0]+f(puntos[tam-1]))/2))+Sumatoria));
-
+  Result := FloatToStr( h * (( ( f(puntos[0]) + f(puntos[tam-1]) )/2) )+Sumatoria);
 end;
 
 function FuncionesMetodosIntegracion.simpson34():String;

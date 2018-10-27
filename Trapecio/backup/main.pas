@@ -50,12 +50,14 @@ var
   AMethods: FuncionesMetodosIntegracion;
   s: String;
 begin
+  //ShowMessage('This is a message from Lazarus');
   Parse1.Expression:= EditFuncion.Text;
   AMethods:= FuncionesMetodosIntegracion.create;
   with AMethods do
   begin
     a := StrToFloat(EditA.Text);
     b := StrToFloat(EditB.Text);
+    n := StrToFloat(EditN.Text);
     fx := EditFuncion.Text;
     MethodType:= Int64(CBMetodos.Items.Objects[CBMetodos.ItemIndex]);
     s:= Execute();
@@ -67,7 +69,7 @@ begin
   Methods:= FuncionesMetodosIntegracion.create;
   CBMetodos.Items.Assign(Methods.MethodList);
   CBMetodos.ItemIndex:= 0;
-  ShowMessage('This is a message from Lazarus');
+  //ShowMessage('This is a message from Lazarus');
   Parse1:= TParseMath.create();
   Parse1.AddVariable('x', 0);
 end;

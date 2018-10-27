@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="41" Y="17"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,9 +19,10 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="43"/>
-        <CursorPos X="16" Y="43"/>
-        <UsageCount Value="38"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="88"/>
+        <CursorPos X="9" Y="139"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -30,18 +31,18 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="110"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="senl.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="SENL"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="26"/>
-        <CursorPos X="15" Y="20"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="69"/>
+        <CursorPos X="28" Y="111"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
@@ -76,7 +77,7 @@
         <EditorIndex Value="1"/>
         <TopLine Value="46"/>
         <CursorPos X="10" Y="46"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit7>
@@ -96,123 +97,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="main.pas"/>
-        <Caret Line="130" Column="19" TopLine="101"/>
+        <Caret Line="145" Column="60" TopLine="56"/>
       </Position1>
       <Position2>
         <Filename Value="main.pas"/>
-        <Caret Line="145" Column="60" TopLine="56"/>
+        <Caret Line="146" Column="60" TopLine="117"/>
       </Position2>
       <Position3>
         <Filename Value="main.pas"/>
-        <Caret Line="146" Column="60" TopLine="117"/>
+        <Caret Line="147" Column="60" TopLine="118"/>
       </Position3>
       <Position4>
         <Filename Value="main.pas"/>
-        <Caret Line="147" Column="60" TopLine="118"/>
+        <Caret Line="146" Column="60" TopLine="117"/>
       </Position4>
       <Position5>
         <Filename Value="main.pas"/>
-        <Caret Line="146" Column="60" TopLine="117"/>
+        <Caret Line="144" Column="5" TopLine="118"/>
       </Position5>
       <Position6>
         <Filename Value="main.pas"/>
-        <Caret Line="144" Column="5" TopLine="118"/>
+        <Caret Line="143" Column="5" TopLine="117"/>
       </Position6>
       <Position7>
         <Filename Value="main.pas"/>
-        <Caret Line="143" Column="5" TopLine="117"/>
+        <Caret Line="142" Column="5" TopLine="116"/>
       </Position7>
       <Position8>
         <Filename Value="main.pas"/>
-        <Caret Line="142" Column="5" TopLine="116"/>
+        <Caret Line="41" Column="7" TopLine="27"/>
       </Position8>
       <Position9>
         <Filename Value="main.pas"/>
-        <Caret Line="41" Column="7" TopLine="27"/>
+        <Caret Line="42" Column="9" TopLine="28"/>
       </Position9>
       <Position10>
         <Filename Value="main.pas"/>
-        <Caret Line="42" Column="9" TopLine="28"/>
+        <Caret Line="98" Column="36" TopLine="92"/>
       </Position10>
       <Position11>
         <Filename Value="main.pas"/>
-        <Caret Line="98" Column="36" TopLine="92"/>
+        <Caret Line="97" Column="36" TopLine="91"/>
       </Position11>
       <Position12>
         <Filename Value="main.pas"/>
-        <Caret Line="97" Column="36" TopLine="91"/>
+        <Caret Line="98" Column="36" TopLine="92"/>
       </Position12>
       <Position13>
         <Filename Value="main.pas"/>
-        <Caret Line="98" Column="36" TopLine="92"/>
+        <Caret Line="100" Column="36" TopLine="94"/>
       </Position13>
       <Position14>
         <Filename Value="main.pas"/>
-        <Caret Line="100" Column="36" TopLine="94"/>
+        <Caret Line="108" Column="38" TopLine="97"/>
       </Position14>
       <Position15>
         <Filename Value="main.pas"/>
-        <Caret Line="108" Column="38" TopLine="97"/>
+        <Caret Line="10" Column="65"/>
       </Position15>
       <Position16>
         <Filename Value="main.pas"/>
-        <Caret Line="10" Column="65"/>
+        <Caret Line="115" Column="38" TopLine="95"/>
       </Position16>
       <Position17>
-        <Filename Value="main.pas"/>
-        <Caret Line="115" Column="38" TopLine="95"/>
+        <Filename Value="frame.pas"/>
+        <Caret Line="14" TopLine="2"/>
       </Position17>
       <Position18>
         <Filename Value="frame.pas"/>
-        <Caret Line="14" TopLine="2"/>
+        <Caret Line="131" Column="5" TopLine="102"/>
       </Position18>
       <Position19>
-        <Filename Value="frame.pas"/>
-        <Caret Line="131" Column="5" TopLine="102"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="115" Column="38" TopLine="95"/>
       </Position19>
       <Position20>
         <Filename Value="main.pas"/>
-        <Caret Line="115" Column="38" TopLine="95"/>
+        <Caret Line="117" Column="38" TopLine="97"/>
       </Position20>
       <Position21>
         <Filename Value="main.pas"/>
-        <Caret Line="117" Column="38" TopLine="97"/>
+        <Caret Line="114" Column="38" TopLine="109"/>
       </Position21>
       <Position22>
-        <Filename Value="main.pas"/>
-        <Caret Line="114" Column="38" TopLine="109"/>
+        <Filename Value="senl.pas"/>
+        <Caret Line="183" Column="14" TopLine="173"/>
       </Position22>
       <Position23>
         <Filename Value="senl.pas"/>
-        <Caret Line="183" Column="14" TopLine="173"/>
+        <Caret Line="184" Column="15" TopLine="173"/>
       </Position23>
       <Position24>
         <Filename Value="senl.pas"/>
-        <Caret Line="184" Column="15" TopLine="173"/>
+        <Caret Line="183" Column="34" TopLine="173"/>
       </Position24>
       <Position25>
-        <Filename Value="senl.pas"/>
-        <Caret Line="183" Column="34" TopLine="173"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="110" Column="12" TopLine="104"/>
       </Position25>
       <Position26>
         <Filename Value="main.pas"/>
-        <Caret Line="110" Column="12" TopLine="104"/>
+        <Caret Line="111" Column="12" TopLine="105"/>
       </Position26>
       <Position27>
         <Filename Value="main.pas"/>
-        <Caret Line="111" Column="12" TopLine="105"/>
+        <Caret Line="118" Column="12"/>
       </Position27>
       <Position28>
         <Filename Value="main.pas"/>
-        <Caret Line="118" Column="12"/>
+        <Caret Line="121" Column="12" TopLine="93"/>
       </Position28>
       <Position29>
         <Filename Value="main.pas"/>
-        <Caret Line="121" Column="12" TopLine="93"/>
+        <Caret Line="179" TopLine="153"/>
       </Position29>
       <Position30>
         <Filename Value="main.pas"/>
-        <Caret Line="179" TopLine="153"/>
+        <Caret Line="43" Column="16" TopLine="43"/>
       </Position30>
     </JumpHistory>
   </ProjectSession>
