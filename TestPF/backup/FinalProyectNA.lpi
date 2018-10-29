@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="FinalProyectNA.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -45,6 +45,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="parseconsola.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="parseConsola"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

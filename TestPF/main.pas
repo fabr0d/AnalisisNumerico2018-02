@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, uCmdBox, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, Grids;
+  Controls, Graphics, Dialogs, ExtCtrls, Grids, Menus;
 
 type
 

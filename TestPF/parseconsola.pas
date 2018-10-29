@@ -5,7 +5,7 @@ unit parseConsola;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, ParseMath, Dialogs;
 
 implementation
 

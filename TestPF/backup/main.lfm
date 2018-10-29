@@ -92,7 +92,7 @@ object Form1: TForm1
     TabOrder = 1
     object StringGrid1: TStringGrid
       Left = 0
-      Height = 312
+      Height = 248
       Top = 0
       Width = 242
       AutoFillColumns = True
@@ -120,10 +120,10 @@ object Form1: TForm1
     end
   end
   object Panel4: TPanel
-    Left = 593
-    Height = 149
-    Top = 315
-    Width = 237
+    Left = 592
+    Height = 248
+    Top = 248
+    Width = 239
     Caption = 'Historial de consola'
     TabOrder = 2
   end
