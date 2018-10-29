@@ -1,26 +1,29 @@
 object Form1: TForm1
   Left = 0
-  Height = 465
+  Height = 496
   Top = 0
-  Width = 834
+  Width = 825
+  ActiveControl = StringGrid1
   Caption = 'Form1'
-  ClientHeight = 465
-  ClientWidth = 834
+  ClientHeight = 496
+  ClientWidth = 825
+  OnCreate = FormCreate
   Visible = False
   object Panel1: TPanel
-    Left = 3
-    Height = 310
+    Left = 0
+    Height = 496
     Top = 0
     Width = 586
+    Align = alLeft
     Caption = 'Panel1'
-    ClientHeight = 310
+    ClientHeight = 496
     ClientWidth = 586
     TabOrder = 0
     object Chart1: TChart
-      Left = -6
-      Height = 312
-      Top = 0
-      Width = 590
+      Left = 1
+      Height = 272
+      Top = 1
+      Width = 584
       AxisList = <      
         item
           Marks.LabelBrush.Style = bsClear
@@ -41,6 +44,8 @@ object Form1: TForm1
       Title.Text.Strings = (
         'TAChart'
       )
+      Align = alTop
+      Visible = False
       object Chart1ConstantLine1: TConstantLine
         Position = 0
       end
@@ -50,6 +55,30 @@ object Form1: TForm1
       end
       object Chart1FuncSeries1: TFuncSeries
       end
+    end
+    object CmdBox1: TCmdBox
+      Left = 1
+      Height = 222
+      Top = 273
+      Width = 584
+      Align = alClient
+      CaretColor = clWhite
+      CaretType = cartLine
+      CaretWidth = 1
+      CaretHeight = 12
+      CaretYShift = 3
+      OnInput = CmdBox1Input
+      LineCount = 1000
+      Font.Color = clSilver
+      Font.Height = -16
+      BackGroundColor = clWhite
+      TabWidth = 60
+      HistoryMax = 10
+      InputSelColor = clBlue
+      InputSelBackGround = clWhite
+      CaretInterval = 500
+      EscapeCodeType = esctCmdBox
+      GraphicalCharacterWidth = 10
     end
   end
   object Panel2: TPanel
@@ -90,20 +119,12 @@ object Form1: TForm1
       )
     end
   end
-  object Panel3: TPanel
-    Left = 6
-    Height = 147
-    Top = 315
-    Width = 583
-    Caption = 'Consola'
-    TabOrder = 2
-  end
   object Panel4: TPanel
     Left = 593
     Height = 149
     Top = 315
     Width = 237
     Caption = 'Historial de consola'
-    TabOrder = 3
+    TabOrder = 2
   end
 end

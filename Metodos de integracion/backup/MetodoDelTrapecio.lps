@@ -19,6 +19,8 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="55"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,10 +34,8 @@
       <Unit3>
         <Filename Value="MetodosDeIntegracionClass.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="93"/>
-        <CursorPos X="6" Y="68"/>
+        <CursorPos X="25" Y="24"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit3>

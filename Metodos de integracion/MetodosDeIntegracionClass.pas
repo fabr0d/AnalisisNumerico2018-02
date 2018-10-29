@@ -21,7 +21,7 @@ type
     private
       Parse: TParseMath;
       function trapecio(): String;
-      function simpson34(): String;
+      function simpson13(): String;
     public
       constructor create;
       destructor Destroy; override;
@@ -36,7 +36,7 @@ constructor FuncionesMetodosIntegracion.create;
 begin
   MethodList:= TStringList.Create;
   MethodList.AddObject('Trapecio',TObject(EsTrapecio));
-  MethodList.AddObject('Simpson3/4',TObject(EsSimpson));
+  MethodList.AddObject('Simpson1/3',TObject(EsSimpson));
   Parse:=TParseMath.create();
   Parse.AddVariable('x',0);
   Parse.Expression:= 'x';
@@ -52,7 +52,7 @@ function FuncionesMetodosIntegracion.Execute(): String;
 begin
   case MethodType of
         EsTrapecio: Result:=trapecio();
-        EsSimpson: Result:=simpson34();
+        EsSimpson: Result:=simpson13();
   end;
 end;
 
@@ -87,7 +87,7 @@ begin
   Result := FloatToStr( h * ((((f(puntos[0])+ f(puntos[tam-1]))/2))+Sumatoria));
 end;
 
-function FuncionesMetodosIntegracion.simpson34():String;
+function FuncionesMetodosIntegracion.simpson13():String;
 var
   h,SumatoriaPar,SumatoriaImpar : Real;
   i,j,k,tam : Integer;
