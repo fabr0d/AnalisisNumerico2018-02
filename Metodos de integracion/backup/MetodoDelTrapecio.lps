@@ -10,7 +10,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -19,7 +19,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -27,20 +27,20 @@
         <Filename Value="parsemath.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
       </Unit2>
       <Unit3>
         <Filename Value="MetodosDeIntegracionClass.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="96"/>
-        <CursorPos X="35" Y="109"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="93"/>
+        <CursorPos X="6" Y="68"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="4" HistoryIndex="3">
+    <JumpHistory Count="5" HistoryIndex="4">
       <Position1>
         <Filename Value="MetodosDeIntegracionClass.pas"/>
         <Caret Line="77" Column="18" TopLine="64"/>
@@ -56,6 +56,10 @@
       <Position4>
         <Filename Value="main.pas"/>
       </Position4>
+      <Position5>
+        <Filename Value="MetodosDeIntegracionClass.pas"/>
+        <Caret Line="115" Column="9" TopLine="96"/>
+      </Position5>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
