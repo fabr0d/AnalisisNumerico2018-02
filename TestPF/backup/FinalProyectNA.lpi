@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="4">
       <Unit0>
         <Filename Value="FinalProyectNA.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -50,6 +50,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="parseConsola"/>
       </Unit2>
+      <Unit3>
+        <Filename Value="parsemath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ParseMath"/>
+      </Unit3>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

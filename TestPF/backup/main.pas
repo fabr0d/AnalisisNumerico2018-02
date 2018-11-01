@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, uCmdBox, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, Grids;
+  Controls, Graphics, Dialogs, ExtCtrls, Grids, Menus;
 
 type
 
@@ -45,7 +45,24 @@ begin
 end;
 
 procedure TForm1.CmdBox1Input(ACmdBox: TCmdBox; Input: string);
+var
+  iPos: Integer;
+  StrList: TStringList;
+  func: string;
 begin
+  StrList:= TStringList.Create;
+  Input := Trim(Input);
+  iPos:= Pos( '(', Input );
+  func:= Trim( Copy( Input, 1, iPos - 1 ));
+  StrList.Delimiter:=',' ;
+  StrList.StrictDelimiter:= true;
+  StrList.DelimitedText:= Copy( Input, iPos + 1, Length( Input ) - iPos - 1  );
+  ShowMessage( 'Función: ' + func);
+  for iPos:= 0 to StrList.Count - 1 do
+  begin
+    ShowMessage( 'Parámetro ' + IntToStr( iPos + 1 ) + ': ' + StrList[ iPos ] );
+
+  end;
   case Input of
         'help': ShowMessage('NecesitoAyuda');
         'exit': begin
@@ -55,7 +72,7 @@ begin
         'plot': Chart1.Visible := True;
         'noplot': Chart1.Visible := False;
   end;
-  CmdBox1.StartRead(clBlack,clWhite,'numerico>',clBlack,clWhite);
+  CmdBox1.StartRead(clBlack,clWhite,'Numericus>',clBlack,clWhite);
 end;
 
 end.

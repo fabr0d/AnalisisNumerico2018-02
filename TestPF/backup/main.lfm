@@ -62,8 +62,8 @@ object Form1: TForm1
       Top = 273
       Width = 584
       Align = alClient
-      CaretColor = clWhite
-      CaretType = cartLine
+      CaretColor = clBackground
+      CaretType = cartUser
       CaretWidth = 1
       CaretHeight = 12
       CaretYShift = 3
