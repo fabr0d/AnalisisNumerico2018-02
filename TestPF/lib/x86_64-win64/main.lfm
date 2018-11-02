@@ -1,22 +1,21 @@
 object Form1: TForm1
   Left = 0
-  Height = 496
+  Height = 487
   Top = 0
-  Width = 825
-  ActiveControl = StringGrid1
+  Width = 866
   Caption = 'Form1'
-  ClientHeight = 496
-  ClientWidth = 825
+  ClientHeight = 487
+  ClientWidth = 866
   OnCreate = FormCreate
   Visible = False
   object Panel1: TPanel
     Left = 0
-    Height = 496
+    Height = 487
     Top = 0
     Width = 586
     Align = alLeft
     Caption = 'Panel1'
-    ClientHeight = 496
+    ClientHeight = 487
     ClientWidth = 586
     TabOrder = 0
     object Chart1: TChart
@@ -58,7 +57,7 @@ object Form1: TForm1
     end
     object CmdBox1: TCmdBox
       Left = 1
-      Height = 222
+      Height = 213
       Top = 273
       Width = 584
       Align = alClient
@@ -81,50 +80,71 @@ object Form1: TForm1
       GraphicalCharacterWidth = 10
     end
   end
-  object Panel2: TPanel
-    Left = 592
-    Height = 310
+  object Panel4: TPanel
+    Left = 586
+    Height = 487
     Top = 0
-    Width = 242
-    Caption = 'Datos grabados]'
-    ClientHeight = 310
-    ClientWidth = 242
+    Width = 280
+    Align = alClient
+    ClientHeight = 487
+    ClientWidth = 280
     TabOrder = 1
+    object HistoryList: TListBox
+      Left = 1
+      Height = 213
+      Top = 273
+      Width = 278
+      Align = alBottom
+      ItemHeight = 0
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 16
+      Height = 28
+      Top = 240
+      Width = 87
+      Caption = 'Historial : '
+      Font.Height = -20
+      ParentColor = False
+      ParentFont = False
+    end
+    object ClearHistory: TButton
+      Left = 112
+      Height = 25
+      Top = 245
+      Width = 99
+      Caption = 'Limpiar Historial'
+      OnClick = ClearHistoryClick
+      TabOrder = 1
+    end
     object StringGrid1: TStringGrid
-      Left = 0
-      Height = 248
-      Top = 0
-      Width = 242
+      Left = 1
+      Height = 232
+      Top = 1
+      Width = 278
+      Align = alTop
       AutoFillColumns = True
       ColCount = 3
       Columns = <      
         item
           Title.Caption = 'Variable'
-          Width = 79
+          Width = 91
         end      
         item
-          Title.Caption = 'Value'
-          Width = 79
+          Title.Caption = 'Valor'
+          Width = 91
         end      
         item
-          Title.Caption = 'Type'
-          Width = 80
+          Title.Caption = 'Tipo'
+          Width = 92
         end>
       FixedCols = 0
-      TabOrder = 0
+      TabOrder = 2
       ColWidths = (
-        79
-        79
-        80
+        91
+        91
+        92
       )
     end
-  end
-  object Panel4: TPanel
-    Left = 592
-    Height = 248
-    Top = 248
-    Width = 239
-    Caption = 'Historial de consola'
-    TabOrder = 2
   end
 end
