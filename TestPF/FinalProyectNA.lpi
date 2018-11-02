@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="4">
+    <Units Count="5">
       <Unit0>
         <Filename Value="FinalProyectNA.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -55,6 +55,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="ParseMath"/>
       </Unit3>
+      <Unit4>
+        <Filename Value="senlclass.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SENLClass"/>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

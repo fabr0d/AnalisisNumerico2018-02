@@ -10,14 +10,13 @@ uses
 type
     SENLFunciones = class
     ErrorAllowed: Real;
-    ValuesA, ValuesB, Sequence, NError,
-    MethodList: TStringList;
+    ValuesA, ValuesB, Sequence, NError, MethodList: TStringList;
     MethodType: Integer;
     a: Real;
     b: Real;
     xi: Real;
     fx: String;
-    FunctionType: String;
+    //FunctionType: String;
     function f(x: Real): Real;
     function df(x: Real): Real;
     function Execute(): String;

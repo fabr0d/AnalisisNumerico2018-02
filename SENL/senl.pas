@@ -16,7 +16,7 @@ type
     b: Real;
     xi: Real;
     fx: String;
-    FunctionType: String;
+    //FunctionType: String;
     function f(x: Real): Real;
     function df(x: Real): Real;
     function Execute(): String;
@@ -174,7 +174,6 @@ function SENLFunciones.Secante(): string;
 var Error: Real;
     xn: Real;
     h: Real;
-    Error2: Real;
 begin
    Parse.Expression:= fx;
    h:= ErrorAllowed/10;
