@@ -3,11 +3,13 @@ object Form1: TForm1
   Height = 487
   Top = 0
   Width = 866
+  ActiveControl = HistoryList
   Caption = 'Form1'
   ClientHeight = 487
   ClientWidth = 866
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  LCLVersion = '1.8.4.0'
   Visible = False
   object Panel1: TPanel
     Left = 0
@@ -129,22 +131,22 @@ object Form1: TForm1
       Columns = <      
         item
           Title.Caption = 'Variable'
-          Width = 91
+          Width = 85
         end      
         item
           Title.Caption = 'Valor'
-          Width = 91
+          Width = 85
         end      
         item
           Title.Caption = 'Tipo'
-          Width = 92
+          Width = 87
         end>
       FixedCols = 0
       TabOrder = 2
       ColWidths = (
-        91
-        91
-        92
+        85
+        85
+        87
       )
     end
   end

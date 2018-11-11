@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, TAGraph, TASeries, TAFuncSeries, uCmdBox, Forms,
-  Controls, Graphics, Dialogs, ExtCtrls, Grids, Menus, StdCtrls, SENLClass, ParseMath;
+  Controls, Graphics, Dialogs, ExtCtrls, Grids, Menus, StdCtrls, SENLClass, ParseMath,FuncionesAuxiliares;
 
 type
 
@@ -46,12 +46,10 @@ implementation
 { TForm1 }
 
 procedure TForm1.FormCreate(Sender: TObject);
-var
-  h: Real;
 begin
   MetodosSENL:= SENLFunciones.create;
-  CmdBox1.StartRead(clBlack,clWhite,'Numericus> ',clBlack,clWhite);
-  h:=0.001;
+  //FuncsAuxs:= FuncionesAux.create;
+  CmdBox1.StartRead(clBlack,clWhite,'Numerico> ',clBlack,clWhite);
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -67,45 +65,66 @@ end;
 procedure TForm1.CmdBox1Input(ACmdBox: TCmdBox; Input: string);
 var
   SENLObject: SENLFunciones;
+  FuncsAuxs: FuncionesAux;
   iPos,i: Integer;
   StrList: TStringList;
-  func,respuesta: string;
+  func,VariableName,respuesta: string;
+  h: Real;
 begin
+  h:=0.001; //Valor por default del h
   SENLObject:=SENLFunciones.create;
   StrList:= TStringList.Create;
+  //Nota:Un string empieza con el indice 1
+  //ShowMessage(Input[1]);
+  CmdBox1.TextColors(clBlack,clWhite);//Color para el input en la consola
   Input := Trim(Input);
+  Input := StringReplace(Input,' ',',',[rfReplaceAll, rfIgnoreCase]);//Cambia los espacios por las comas
+//Hay 3 casos
+//Una variable que se iguala a una funcion "string" como 'x^2' se tiene que verificar si ya existe o no
+//Una variable que se iguale a un numero
+//Una variable que se iguale un metodo y que el resultado se guarde en este y en el metodo se tiene que
+//verificar las variables si son imputs directos o son defrente
+  if FuncsAuxs.ExisteIgualdad(Input) <> 0 then
+  begin
+    VariableName := Copy(Input,1,FuncsAuxs.ExisteIgualdad(Input)-1);
+    Input := Copy(Input,FuncsAuxs.ExisteIgualdad(Input)+1,Length(Input));
+  end;
+
   iPos:= Pos( '(', Input );
   func:= Trim( Copy( Input, 1, iPos - 1 ));
   StrList.Delimiter:=',' ;
   StrList.StrictDelimiter:= true;
   StrList.DelimitedText:= Copy( Input, iPos + 1, Length( Input ) - iPos - 1  );
-  CmdBox1.TextColors(clBlack,clWhite);
   case func of
         'root' : begin
-          CmdBox1.Writeln('Se detecto la funcion : root');
-          CmdBox1.Writeln('funcion :'+StrList[0]);
-          SENLObject.fx := StrList[0];
-
-          CmdBox1.Writeln('a :'+StrList[1]);
-          SENLObject.a := StrToFloat(StrList[1]);
-
-          CmdBox1.Writeln('b :'+StrList[2]);
-          SENLObject.b := StrToFloat(StrList[2]);
-
-          CmdBox1.Writeln('Metodo :'+StrList[3]);
-          case StrList[3] of
+          //QuotedStr();
+          CmdBox1.Writeln('Se detecto el comando : root');
+          //Borra las comillas de la funcion
+          StrList[0]:= StringReplace(StrList[0],'''','',[rfReplaceAll, rfIgnoreCase]);
+          CmdBox1.Writeln('Funcion :'+StrList[0]);
+          SENLObject.fx := StrList[0];//La funcion
+          SENLObject.a := StrToFloat(StrList[1]);//Parametro a
+          SENLObject.b := StrToFloat(StrList[2]);//Parametro b
+          SENLObject.ErrorAllowed := h;//Asignacion de la h
+          CmdBox1.Writeln('Uno o Todos :'+StrList[4]);
+          case StrList[3] of //Numero del metodo
                 '0' :begin
                   respuesta := SENLObject.Biseccion();
+                  CmdBox1.Writeln('Biseccion');
+                  CmdBox1.Writeln('La respuesta es: '+respuesta);
                 end;
                 '1' :begin
                   respuesta := SENLObject.FalsaPosicion();
+                  CmdBox1.Writeln('FalsaPosicion');
+                  CmdBox1.Writeln('La respuesta es: '+respuesta);
                 end;
                 '2' :begin
                   respuesta := SENLObject.Secante();
+                  CmdBox1.Writeln('Secante');
+                  CmdBox1.Writeln('La respuesta es: '+respuesta);
                 end;
           end;
 
-          CmdBox1.Writeln('Uno o Todos :'+StrList[4]);
         end;
         'polyroot' : begin
           CmdBox1.Writeln('Se detecto la funcion : polyroot');
@@ -156,7 +175,7 @@ begin
           Chart1.Visible := False;
         end;
   end;
-  CmdBox1.StartRead(clBlack,clWhite,'Numericus>',clBlack,clWhite);
+  CmdBox1.StartRead(clBlack,clWhite,'Numerico>',clBlack,clWhite);
   HistoryList.Clear;
   for i:=0 to CmdBox1.HistoryCount-1 do HistoryList.Items.Add(CmdBox1.History[i]);
 end;

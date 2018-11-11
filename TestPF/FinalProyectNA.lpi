@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="5">
+    <Units Count="6">
       <Unit0>
         <Filename Value="FinalProyectNA.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -60,6 +60,10 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="SENLClass"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="FuncionesAuxiliares.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
