@@ -31,7 +31,7 @@ type
   private
     MetodosSENL: SENLFunciones;
     Parse1: TParseMath;
-    function f(x: Real): Real;
+    FuncsAuxs: FuncionesAux;
   public
 
   end;
@@ -48,8 +48,20 @@ implementation
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   MetodosSENL:= SENLFunciones.create;
-  //FuncsAuxs:= FuncionesAux.create;
+  FuncsAuxs:= FuncionesAux.create;
   CmdBox1.StartRead(clBlack,clWhite,'Numerico> ',clBlack,clWhite);
+  StringGrid1.Cells[0,1]:='h'; // [columnas,filas]
+  StringGrid1.Cells[1,1]:='0.001'; // [columnas,filas]
+  StringGrid1.Cells[2,1]:='Double'; // [columnas,filas]
+  FuncsAuxs.VariableLocales[0,0]:=StringGrid1.Cells[0,1];
+  FuncsAuxs.VariableLocales[0,1]:=StringGrid1.Cells[1,1];
+  FuncsAuxs.VariableLocales[0,2]:=StringGrid1.Cells[2,1];
+  StringGrid1.Cells[0,2]:='decimales'; // [columnas,filas]
+  StringGrid1.Cells[1,2]:='0.2'; // [columnas,filas]
+  StringGrid1.Cells[2,2]:='Integer'; // [columnas,filas]
+  FuncsAuxs.VariableLocales[0,0]:=StringGrid1.Cells[0,1];
+  FuncsAuxs.VariableLocales[0,1]:=StringGrid1.Cells[1,1];
+  FuncsAuxs.VariableLocales[0,2]:=StringGrid1.Cells[2,1];
 end;
 
 procedure TForm1.FormDestroy(Sender: TObject);
@@ -57,21 +69,13 @@ begin
   MetodosSENL.Destroy;
 end;
 
-function TForm1.f(x: Real): Real;
-begin
-
-end;
-
 procedure TForm1.CmdBox1Input(ACmdBox: TCmdBox; Input: string);
 var
   SENLObject: SENLFunciones;
-  FuncsAuxs: FuncionesAux;
-  iPos,i: Integer;
+  iPos, i: Integer;
   StrList: TStringList;
-  func,VariableName,respuesta: string;
-  h: Real;
+  func, VariableName, respuesta: string;
 begin
-  h:=0.001; //Valor por default del h
   SENLObject:=SENLFunciones.create;
   StrList:= TStringList.Create;
   //Nota:Un string empieza con el indice 1
@@ -105,26 +109,35 @@ begin
           SENLObject.fx := StrList[0];//La funcion
           SENLObject.a := StrToFloat(StrList[1]);//Parametro a
           SENLObject.b := StrToFloat(StrList[2]);//Parametro b
-          SENLObject.ErrorAllowed := h;//Asignacion de la h
-          CmdBox1.Writeln('Uno o Todos :'+StrList[4]);
-          case StrList[3] of //Numero del metodo
-                '0' :begin
-                  respuesta := SENLObject.Biseccion();
-                  CmdBox1.Writeln('Biseccion');
-                  CmdBox1.Writeln('La respuesta es: '+respuesta);
-                end;
-                '1' :begin
-                  respuesta := SENLObject.FalsaPosicion();
-                  CmdBox1.Writeln('FalsaPosicion');
-                  CmdBox1.Writeln('La respuesta es: '+respuesta);
-                end;
-                '2' :begin
-                  respuesta := SENLObject.Secante();
-                  CmdBox1.Writeln('Secante');
-                  CmdBox1.Writeln('La respuesta es: '+respuesta);
-                end;
-          end;
-
+          SENLObject.ErrorAllowed := StrToFloat(StringGrid1.Cells[1,1])       ;//Asignacion de la h
+          CmdBox1.Writeln('numero de parametros en la funcion: '+IntToStr(StrList.Count));
+          if(StrList.Count=3) then
+          begin
+            respuesta := SENLObject.Secante();
+            CmdBox1.Writeln('La respuesta es: '+respuesta);
+          end
+          else
+          begin
+            CmdBox1.Writeln('Metodo :'+StrList[3]);
+            CmdBox1.Writeln('Uno o Todos :'+StrList[4]); // ver como se hace luego
+            case StrList[3] of //Numero del metodo
+                  '0' :begin
+                    respuesta := SENLObject.Biseccion();
+                    CmdBox1.Writeln('Biseccion');
+                    CmdBox1.Writeln('La respuesta es: '+respuesta);
+                  end;
+                  '1' :begin
+                    respuesta := SENLObject.FalsaPosicion();
+                    CmdBox1.Writeln('FalsaPosicion');
+                    CmdBox1.Writeln('La respuesta es: '+respuesta);
+                  end;
+                  '2' :begin
+                    respuesta := SENLObject.Secante();
+                    CmdBox1.Writeln('Secante');
+                    CmdBox1.Writeln('La respuesta es: '+respuesta);
+                  end;
+            end;
+          end
         end;
         'polyroot' : begin
           CmdBox1.Writeln('Se detecto la funcion : polyroot');

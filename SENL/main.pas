@@ -22,8 +22,6 @@ type
     Chart1LineSeries1: TLineSeries;
     BtnEjecutar: TButton;
     CBsenl: TComboBox;
-    ChartToolset1: TChartToolset;
-    ChartToolset1DataPointClickTool1: TDataPointClickTool;
     EditF2A: TEdit;
     EditF2B: TEdit;
     EditF1A: TEdit;

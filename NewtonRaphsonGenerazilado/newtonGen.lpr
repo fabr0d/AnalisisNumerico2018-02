@@ -7,8 +7,7 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, main, NewtonGenMethod
-  { you can add units after this };
+  Forms, main, NewtonGenMethod, matrix;
 
 {$R *.res}
 

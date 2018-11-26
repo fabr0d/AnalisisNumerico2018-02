@@ -33,7 +33,7 @@ var
    i : Integer;
 begin
      for i:=0 to tp-1 do begin
-       Result := Result + '(x-(' + FloatToStr( arrRoots[i] ) + '))';
+       Result := Result + '(x-(' + FloatToStr( arrRoots[i].x ) + '))';
        if i <> tp-1 then
        Result := Result + '*';
      end;

@@ -7,7 +7,9 @@ interface
 uses
   Classes, SysUtils;
 type
-  TRoot = class x : Real; end;
+  TRoot = class
+    x : Real;
+  end;
   TPolis = class
     arrRoots : array of TRoot;
     tp: Integer;

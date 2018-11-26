@@ -8,7 +8,7 @@
       <Unit0>
         <Filename Value="PolByRoots.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="26" Y="10"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
@@ -17,10 +17,11 @@
         <Filename Value="main.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="48"/>
-        <CursorPos X="19" Y="67"/>
+        <TopLine Value="20"/>
+        <CursorPos X="10" Y="31"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -28,14 +29,14 @@
       <Unit2>
         <Filename Value="polinomios.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="19"/>
-        <CursorPos X="18" Y="28"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="20" Y="37"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit2>
     </Units>
-    <JumpHistory Count="8" HistoryIndex="7">
+    <JumpHistory Count="10" HistoryIndex="9">
       <Position1>
         <Filename Value="main.pas"/>
       </Position1>
@@ -67,6 +68,14 @@
         <Filename Value="main.pas"/>
         <Caret Line="69" Column="32" TopLine="48"/>
       </Position8>
+      <Position9>
+        <Filename Value="main.pas"/>
+        <Caret Line="77" Column="6" TopLine="52"/>
+      </Position9>
+      <Position10>
+        <Filename Value="main.pas"/>
+        <Caret Line="83" Column="15" TopLine="60"/>
+      </Position10>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

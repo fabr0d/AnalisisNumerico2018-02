@@ -3,6 +3,7 @@ object Form1: TForm1
   Height = 386
   Top = 0
   Width = 659
+  ActiveControl = EditNumRaices
   Caption = 'Form1'
   ClientHeight = 386
   ClientWidth = 659

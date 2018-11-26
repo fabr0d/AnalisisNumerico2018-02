@@ -1,0 +1,186 @@
+1 Aplicacion 0 ó 20
+2 Exposicion 0 a 20
+clearplot limpia las graficas
+
+error por defecto va a ser 10^-2
+decimales por defecto va a ser 2
+pero ambos es pueden modificar
+
+funciones por defecto de color la 1era azul
+y la 2da rojo
+
+-------------------------------------------------------------------------------------------------
+Definicion de variables:
+Los 3 primeros parametros del root se pueden tambien leer de las variables declaradas
+tiene que funcionar la suma de variables
+ejemplo:
+>a=4
+>b=7
+>a+b 
+>imprime 11
+>z=a+b
+esto deveria guardar z=11
+
+------------------------------------------------------------------------------------------------
+1era funcion , raices de una funcion
+5 parametros root(f,a,b,Boleano,Metodo) SI PLOTEA
+
+0=biseccion
+1=falsa posicion 
+2=secante
+
+1er parametro un string que es la funcion
+directa o definida antes en otra variable
+y si es metodo abierto es el punto medio de los a y b
+root(f,a,b,Boleano,Metodo) para que sean todas las raices con True y 
+False solo 1 raiz 
+si son mas de 1 respuesta recuperarlo en un string list si se le asigna una variable y se puedan meter
+
+Biseccion con secante por default y interseccion con intervalo		
+root(f,a,b,Boleano) ó
+root(f,a,b,Boleano,Metodo)
+
+la primera la segunda y el tercer valor pueden ser de la tabla
+
+Ejemplos:
+
+root('x+1',-2,3,False,0)<--------------
+root('x+1',-2,3,False)
+root('sin(x)',-2,3,False)
+root('sin(x)',-7,7,True)
+root('x+1',-2,3,False)
+
+root('ln(x)',1,6,False)
+root('ln(x)',1,6,True)
+
+Pruebas para el root:
+a=root('sin(x)',-7,7,True)
+a=root('sin(x)',-7,7,False)
+b=root('sin(x)',-7,7,True,0)
+b=root('sin(x)',-7,7,True,1)
+b=root('sin(x)',-7,7,True,2)
+c=root('sin(x)',-7,7,False,0)
+c=root('sin(x)',-7,7,False,1)
+c=root('sin(x)',-7,7,False,2)
+
+-------------------------------------------------------------------------------------------------------------------
+SE PUEDE ASIGNAR A UNA VARIABLE
+polinomios a partir de raices
+polyroot([1,3,5,8])  NO PLOTEA
+y retorna el polinomio expandido
+f=polyroot([1,3,5,8]) se le asigna el polinomio a f
+
+Pruebas para el root:
+funcRoot=polyroot([1,3,5,8])
+Puntos1=[1,2,4,5]
+funcRoot=polyroot(Puntos1)
+
+-------------------------------------------------------------------------------------------------------------------
+SE PUEDE ASIGNAR A UNA VARIABLE
+polinomios de lagrange							(que en ves de comas sea con espacion tmb))
+g=polynomial([1,3,5],[4,2,3]) VERIFICAR QUE LA LISTA DE XS Y YS SEAN DE CANTIDADES IGUALES
+				x		y
+f=[1,3,5]
+e=[4,2,3]
+g=polynomial(f,e)
+NO SE PUEDE EVALUAR FUERA DEL INTERVALO PERO SI LO TIENE QUE HACER EL PROG
+-------------------------------------------------------------------------------------------------------------------
+NUEVA FUNCION
+
+f='x^2'
+x=4 // error de asignacion denuevo en el parse
+	// limpiar las areas y line series
+eval(f)
+vota la evaluacion
+-------------------------------------------------------------------------------------------------------------------
+NewtonGeneralizado
+senl(['x','y'],['(x^2)+(y^2)-4','(x^2)-(y^2)-4'],[1,1.5])
+senl(['x','y','z'],[f1,f2,f3],[x0,y0,z0])
+	  variables		funciones  Puntos Iniciales
+
+Si no se encontro raiz devolver un mensaje de eso
+numero de variables tiene que ser igual al numero de funciones  
+variables a usar - funciones - puntos iniciales
+---------------------------------------------------------------------------------------------------------------------
+
+el color es tcolor el tipo
+plot2d(f,a,b,color)
+plot2d('x^2',-4,4,clBlue)
+plot2d('cos(x)',-4,4,clRed)
+Si haces click a 2 funciones debe mostrar las intersecciones de este y la interseccion 
+y toma el intervalo de las 2 ultimas
+
+clearplot
+---------------------------------------------------------------------------------------------------------------------
+
+intersection(f,g,a,b,colorf,colorg)
+intersection('sin(x)','cos(x)+1',-4,4,clGreen,clPurple)
+
+plotea las 2 funciones y los puntos de interseccion
+
+--------------------------------------------------------------------------------------------------------------------------
+Dormand and prince por defecto
+edo(dfuncion,xo,yo,xn,metodo)
+edo('x*y',1,2,2,0)
+metodo opcional puede o no estar
+
+Grafica
+
+Cuando Xn es menor a Xo el h es negativo
+
+regresa el ultimo numero(Yn)
+Grafica los puntos unidos con lineas
+
+0=Euler
+1=EulerHeun
+2=RungeKuta4
+3=Dorman and Prince
+----------------------------------------------------------------------------------------------------------------------
+integral(funcion,a,b,metodo)
+integral('x^3',2,3,0)
+integral('sin(x)',4,5,0)
+
+Metodo es Opcionesl por defecto trrapecio
+Si Grafica
+Grafica la region sombreada
+0=trapecio
+1=simpson 1/3
+2=simpson 3/8
+
+positivo o negativo
+
+----------------------------------------------------------------------------------------------------------------------
+area(funcion1,funcion2,a,b,metodo)
+area('x^2','x^(1/2)',0,1,0)
+
+area('x^2','x^(1/2)',0,1,0)
+Metodo es Opcionesl por defecto trrapecio
+Si Grafica
+f y g con colores distintos
+
+*Nota
+Resta de las 2 funciones
+F =f-(g)
+
+en trapecio, cada f_i le doy valor absoluto
+
+la funcion 2 puede ser '0'	
+
+Preguntas como :
+Encuentrame un polinomio que pase por los puntos bla bla bla
+
+Osea no te va a decir que funcion usar si no un problema para usarlo
+
+--------------------------------------------------------------------------------------------------------------
+
+Por 1 punto la permanente
+Hacer el metodo de runge kutta para resolver SEDO
+
+ME toca el viernes
+
+
+-------------------------------------------------------------------------
+
+Funciones nuevas
+
+chartRange(10,10,10,10)

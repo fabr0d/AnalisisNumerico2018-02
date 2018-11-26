@@ -6,7 +6,9 @@ interface
 uses
   Classes, SysUtils,Dialogs;
 type
-    TPoint = class x,y: Real;end;
+    TPoint = class
+      x,y: Real;
+    end;
 
     TInterpolation = class
       arrPoints : array of TPoint;
@@ -36,6 +38,7 @@ var
   SubPol: TStringList;
   p: String;
 begin
+    Result:='';
   for i:=0 to tp-1 do begin
     SubPol := TStringList.create();
     cf := 1;
@@ -54,7 +57,6 @@ begin
       SubPol.add(p);
       cf := cf * (arrPoints[i].x - arrPoints[j].x);
       ShowMessage(FloatToStr(cf));
-      ShowMessage(FloatToStr(arrPoints[j].x));
     end;
     Result := Result + '(' +FloatToStr(arrPoints[i].y) + '/' + FloatToStr(cf) + ')*' + SubPol.text;
     if i <> tp-1 then

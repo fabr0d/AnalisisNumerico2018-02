@@ -122,7 +122,7 @@ begin
        exit();
    end;
    strFx := ediFunction.text;
-   arrFunctions[i].Expression:= strFx;
+   arrFunctions[i].Expression:= strFx;//<----------------
    stgShowFx.Cells[0,i+1] := strFx;
 
 

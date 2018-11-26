@@ -81,8 +81,6 @@ constructor TNewtonGen.create(_numFunc, _numVar: Integer);
 begin
    self.numFunc := _numFunc;
    self.numVar := _numVar;
-   self.MaxError := MaxError_;
-   self.h := MaxError_/10;
    listXi := TStringList.create;
    listError := TStringList.create;
    Xo := TMatrix.create(_numFunc, 1);
@@ -92,7 +90,7 @@ function TNewtonGen.calculate(MaxError_, h_: Real): TMatrix;
 var
   Fx, JFx : TMatrix;
   Xi, Xprev: TMatrix;
-  i: Integer;
+  i,Iter: Integer;
   Error: Double;
 begin
    self.MaxError := MaxError_;
@@ -107,6 +105,10 @@ begin
       Xprev := Xi;
       Fx := evalFx(Xi);
       JFx := evalJFx(Xi);
+      for Iter:=0 to numVar do
+      begin
+        ShowMessage('JFx['+IntToStr(Iter)+']: '+FloatToStr(JFx.getElement(Iter,0)));
+      end;
       Xi := Xi.Sub(JFx.inverse().MultMat(Fx)); // Xi = Xi - JFx**-1 * Fx
       listXi.add(MatrixToStr(Xi));
       if i <> 0 then begin
@@ -120,7 +122,7 @@ end;
 
 function TNewtonGen.evalFx(Xi: TMatrix): TMatrix;
 var
-  i,j: Integer;
+  i,j,Iter: Integer;
 begin
    Result := TMatrix.create(numFunc,1);
    for i:=0 to numFunc-1 do begin
@@ -128,11 +130,15 @@ begin
            arrFunctions[i].newValue(arrVariables[j], Xi.getElement(j,0));
        Result.setElement(i,0, arrFunctions[i].Evaluate());
    end;
+   for Iter:=0 to numVar-1 do
+   begin
+     //ShowMessage('evalFx['+IntToStr(Iter)+']: '+FloatToStr(Result.getElement(Iter,0)));
+   end;
 end;
 
 function TNewtonGen.evalJFx(Xi: TMatrix): TMatrix;
 var
-  i,j,k: Integer;
+  i,j,k,Iter: Integer;
   Fx: TMatrix;
 begin
   Result := TMatrix.create(numFunc,numVar);
@@ -148,6 +154,10 @@ begin
       Result.setElement(i,j,(arrFunctions[i].Evaluate() - Fx.getElement(i,0))/h); //f(x1,x2,...,xi+h,...,xn) - f(x1,x2,...,xn)
     end;
   end;
+  for Iter:=0 to numVar-1 do
+   begin
+     ShowMessage('evalJFx['+IntToStr(Iter)+']: '+FloatToStr(Result.getElement(Iter,0)));
+   end;
 end;
 
 end.

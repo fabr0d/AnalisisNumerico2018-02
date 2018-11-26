@@ -9,15 +9,11 @@ uses
 
 type
   TParseMath = Class
-
   Private
       FParser: TFPExpressionParser;
       identifier: array of TFPExprIdentifierDef;
       Procedure AddFunctions();
-
-
   Public
-
       Expression: string;
       function NewValue( Variable:string; Value: Double ): Double;
       procedure AddVariable( Variable: string; Value: Double );
@@ -25,12 +21,9 @@ type
       function Evaluate(  ): Double;
       constructor create();
       destructor destroy;
-
   end;
 
 implementation
-
-
 
 constructor TParseMath.create;
 begin
@@ -62,8 +55,6 @@ function IsNumber(AValue: TExprFloat): Boolean;
 begin
   result := not (IsNaN(AValue) or IsInfinite(AValue) or IsInfinite(-AValue));
 end;
-
-
 
 procedure ExprFloor(var Result: TFPExpressionResult; Const Args: TExprParameterArray); // maximo entero
 var
@@ -188,9 +179,9 @@ begin
        AddFunction('ln', 'F', 'F', @ExprLn);
        AddFunction('log', 'F', 'F', @ExprLog);
        AddFunction('sqrt', 'F', 'F', @ExprSQRT);
-       AddFunction('floor', 'F', 'F', @ExprFloor );
        AddFunction('power', 'F', 'FF', @ExprPower); //two float arguments 'FF' , returns float
        //AddFunction('Newton', 'F', 'SF', @ExprNewton ); // Una sring argunmen and one float argument, returns float
+       //AddFunction();
 
    end
 
